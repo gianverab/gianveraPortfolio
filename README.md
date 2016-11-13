@@ -1,3 +1,19 @@
-# Base Template
+# Base Frontend Template
 
-A basic template used in my frontend workflow.
+## Description
+
+A base template that I use in my frontend workflow. 
+
+## Getting Started
+
+To get all the dependencies just type:
+
+```
+npm install
+```
+
+To run your local server just type:
+
+```
+gulp
+```
