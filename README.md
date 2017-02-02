@@ -9,7 +9,7 @@ A base template that I use in my frontend workflow.
 To get all the dependencies just type:
 
 ```
-npm install
+yarn install
 ```
 
 To run your local server just type:
