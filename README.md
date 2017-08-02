@@ -1,19 +1,5 @@
-# Base Frontend Template
+# Giancarlo Vera | Portfolio
 
 ## Description
 
-A base template that I use in my frontend workflow. 
-
-## Getting Started
-
-To get all the dependencies just type:
-
-```
-yarn install
-```
-
-To run your local server just type:
-
-```
-gulp
-```
+My personal portfolio. Here you will find the stuff I made and the projects I working on.
