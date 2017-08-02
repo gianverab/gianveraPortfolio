@@ -1,26 +1,27 @@
 {
-  "name": "base-template",
-  "version": "0.1.0",
-  "description": "A basic template used in my frontend workflow.",
+  "name": "Giancarlo's Portfolio",
+  "version": "1.1.0",
+  "description": "My personal portfolio. Here you will find the stuff I made and the projects I working on.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+ssh://git@github.com/gianverab/basetemplate.git"
+    "url": "git+ssh://git@github.com/gianverab/GVPortfolio.git"
   },
   "keywords": [
     "javascript",
-    "gulp",
-    "node"
+    "node",
+    "html",
+    "frontend"
   ],
-  "author": "Gian Vera",
+  "author": "Giancarlo Vera",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/gianverab/basetemplate/issues"
+    "url": "https://github.com/gianverab/GVPortfolio/issues"
   },
-  "homepage": "https://github.com/gianverab/basetemplate#readme",
+  "homepage": "https://github.com/gianverab/GVPortfolio#readme",
   "devDependencies": {
     "browser-sync": "^2.14.0",
     "del": "^2.2.2",
