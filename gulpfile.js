@@ -1,82 +1,62 @@
 // Include Dependencies
 var gulp = require('gulp')
-var sass = require('gulp-sass')
+var postcss = require('gulp-postcss')
+var cssvars = require('postcss-simple-vars')
+var nested = require('postcss-nested')
+var importcss = require('postcss-import')
 var autoprefixer = require('gulp-autoprefixer')
-var concatcss = require('gulp-concat-css')
-var cssnano = require('gulp-cssnano')
-var concat = require('gulp-concat')
-var uglify = require('gulp-uglify')
+var newer = require('gulp-newer')
 var imagemin = require('gulp-imagemin')
-var htmlmin = require('gulp-htmlmin')
 var rename = require('gulp-rename')
 var sourcemaps = require('gulp-sourcemaps')
-var del = require('del')
 var browsersync = require('browser-sync').create()
 
 // Include Paths
-var paths = {
-  src: './app/',
-  build: './build/'
-}
+var cssSrc = './app/css/*.css'
+var cssDest = './build/css/'
+var imgSrc = './app/img/*'
+var imgDest = './build/img/'
+var htmlSrc = './app/*.html'
+var build = './build/'
 
-// Clean task
-gulp.task('clean', function () {
-  return del([paths.build])
-})
-
-// Compile Sass, autoprefix, concat & minify
+// CSS Workflow
 gulp.task('styles', function () {
-  return gulp.src(paths.src + 'scss/**/*.scss')
+  return gulp.src(cssSrc)
     .pipe(sourcemaps.init())
-    .pipe(sass())
+    .pipe(postcss([importcss, cssvars, nested]))
     .pipe(autoprefixer({
       browsers: ['last 10 versions'],
       cascade: false
     }))
-    .pipe(concatcss('all.css'))
-    .pipe(cssnano())
     .pipe(rename('app.min.css'))
     .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.build + 'css/'))
-    .pipe(browsersync.stream())
+    .pipe(gulp.dest(cssDest))
 })
 
-// Compile scripts, concat & uglify
-gulp.task('scripts', function () {
-  return gulp.src(paths.src + 'js/**/*.js')
-    .pipe(sourcemaps.init())
-    .pipe(concat('all.js'))
-    .pipe(uglify())
-    .pipe(rename('app.min.js'))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(paths.build + 'js/'))
-})
-
-// HTML task
+// HTML Workflow
 gulp.task('html', function () {
-  return gulp.src(paths.src + '*.html')
-    .pipe(htmlmin({collapseWhitespace: true}))
-    .pipe(gulp.dest(paths.build))
+  return gulp.src(htmlSrc)
+    .pipe(gulp.dest(build))
 })
 
-// Compress images
+// Minify any new images
 gulp.task('images', function () {
-  return gulp.src(paths.src + 'img/*')
-    .pipe(imagemin({optimizationLevel: 7}))
-    .pipe(gulp.dest(paths.build + 'img/'))
+  return gulp.src(imgSrc)
+    .pipe(newer(imgDest))
+    .pipe(imagemin({ optimizationLevel: 5 }))
+    .pipe(gulp.dest(imgDest))
 })
 
 // Server set up and reload
-gulp.task('serve', ['styles', 'scripts', 'html', 'images'], function () {
+gulp.task('serve', ['styles', 'html', 'images'], function () {
   browsersync.init({
-    server: paths.build
+    server: build
   })
-  gulp.watch(paths.src + 'scss/**/*.scss', ['styles'])
-  gulp.watch(paths.src + 'js/**/*.js', ['scripts'])
-  gulp.watch(paths.build + 'js/**/*.js').on('change', browsersync.reload)
-  gulp.watch(paths.src + '*.html', ['html'])
-  gulp.watch(paths.build + '*.html').on('change', browsersync.reload)
+  gulp.watch('./app/css/**/*.css', ['styles'])
+  gulp.watch('./build/css/*.css').on('change', browsersync.reload)
+  gulp.watch(htmlSrc, ['html'])
+  gulp.watch(build + '*.html').on('change', browsersync.reload)
 })
 
 // Default gulp command
-gulp.task('default', ['clean', 'serve'])
+gulp.task('default', ['serve'])
