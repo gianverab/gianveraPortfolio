@@ -1,1 +1,4 @@
 @import 'normalize.css';
+@import "partials/_global";
+@import "partials/_header";
+@import "partials/_hero";
