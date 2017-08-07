@@ -1,3 +1,14 @@
-.large-hero__subtitle {
-  font-family: 'Slabo 27px', serif;
+.large-hero {
+  background-color: #dfdce3;
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  &__title {
+    margin: 0;
+  }
+  &__subtitle {
+    font-family: 'Slabo 27px', serif;
+    font-size: 2.7em;
+    margin: 0.225em 0;
+  }
 }

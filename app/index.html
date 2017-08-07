@@ -8,10 +8,11 @@
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
         <![endif]-->
-    <title>Giancarlo Vera | Portfolio</title>
+    <title>Giancarlo Vera | Frontend Developer</title>
 
        <!-- CUSTOM CSS -->
     <link href="https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:300|Slabo+27px" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.min.css">
 
     <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
@@ -21,7 +22,7 @@
     <![endif]-->
 </head>
 <body>
-  <header class="header">
+  <header class="header" id="top">
     <div class="header__logo">
       <h1><a href="index.html">Giancarlo Vera</a></h1>
     </div>
@@ -34,11 +35,9 @@
   </header>
 
   <div class="large-hero">
-    <div class="wrapper">
-      <div class="large-hero__text">
-        <h1 class="large-hero__title">Hi, I'm Giancarlo</h1>
-        <h2 class="large-hero__subtitle">A frontend developer making some stuff on the web.</h2>
-      </div>
+    <div class="large-hero__text">
+      <h1 class="large-hero__title">Hi, I'm Giancarlo</h1>
+      <h2 class="large-hero__subtitle">A frontend developer who enjoys coding and birdwatching.</h2>
     </div>
   </div>
 
@@ -64,7 +63,7 @@
       <p>Here you find some of the projects I worked on the last couple years. </p>
       <div class="projects">
         <article class="projects__item">
-          <img src="" alt="IMCG Consulting" class="projects__image">
+          <img src="img/imcg_desktop.png" alt="IMCG Consulting" class="projects__image">
           <h3 class="projects__title">IMCG Consulting</h3>
           <p class="projects__description">
             IMCG is a consulting firm that improve internal processes by providing education and training to enhance people’s potential.
@@ -72,7 +71,7 @@
           </p>
         </article>
         <article class="projects__item">
-          <img src="" alt="Sidesys IT Solutions" class="projects__image">
+          <img src="img/sidesys_desktop.png" alt="Sidesys IT Solutions" class="projects__image">
           <h3 class="projects__title">Sidesys IT Solutions</h3>
           <p class="projects__description">
             Company with more than a decade committed to design, develop and implement innovative solutions to improve their customer experience
@@ -80,7 +79,7 @@
           </p>
         </article>
         <article class="projects__item">
-          <img src="" alt="Tienda Latam" class="projects__image">
+          <img src="img/tiendalatam_desktop.png" alt="Tienda Latam" class="projects__image">
           <h3 class="projects__title">Tienda Latam</h3>
           <p class="projects__description">
             Specialized in provide ecommerce solutions to their clients, using platforms like Magento &amp; Prestashop.
@@ -90,18 +89,27 @@
     </div>
   </section>
 
-  <footer class="footer">
-    <div class="footer__legal">
-      <p>&copy; 2017 Giancarlo Vera</p>
-    </div>
-    <div class="footer__social">
-      <p>
-        <a href="https://github.com/gianverab" target="_blank">Github</a>
-        <a href="https://twitter.com/gianvera" target="_blank">Twitter</a>
-        <a href="https://www.linkedin.com/in/gianvera/" target="_blank">Linkedin</a>
-      </p>
-    </div>
-  </footer>
+  <div class="outerWrapper">
+    <footer class="footer">
+      <div class="footer__top">
+        <img src="img/logo-white.svg" alt="Giancarlo Vera">
+        <a href="#top" id="goTop"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+      </div>
+      <div class="footer__legal">
+        <p>&copy; 2017 Giancarlo Vera</p>
+      </div>
+      <div class="footer__contact">
+        <a href="mailto:gianverab@gmail.com">gianverab@gmail.com</a>
+      </div>
+      <div class="footer__social">
+        <p>
+          <a href="https://github.com/gianverab" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a>
+          <a href="https://twitter.com/gianvera" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+          <a href="https://www.linkedin.com/in/gianvera/" target="_blank" title="Linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+        </p>
+      </div>
+    </footer>
+  </div>
 
 	<!-- CUSTOM SCRIPTS -->
     <script src="js/app.min.js"></script>

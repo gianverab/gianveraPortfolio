@@ -4,4 +4,37 @@
   align-items: center;
   max-width: 1200px;
   margin: 0 auto;
+  flex-wrap: wrap;
+  color: #fff;
+  a {
+    color: #fff;
+    text-decoration: none;
+  }
+  #goTop {
+    font-size: 1.8em;
+  }
+  &__top {
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    img {
+      width: 64px;
+      height: auto;
+    }
+  }
+  &__contact a {
+    color: #f7b733;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  &__social a {
+    font-size: 1.8em;
+    margin: 0 0.2rem;
+    transition: all 0.5s ease-in-out;;
+    &:hover {
+      color: #f7b733;
+    }
+  }
 }
