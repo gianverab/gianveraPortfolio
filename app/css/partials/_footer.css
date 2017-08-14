@@ -1,10 +1,5 @@
 .footer {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap;
+  background-color: #262228;
   color: #fff;
   a {
     color: #fff;
@@ -21,12 +16,6 @@
     img {
       width: 64px;
       height: auto;
-    }
-  }
-  &__contact a {
-    color: #f7b733;
-    &:hover {
-      text-decoration: underline;
     }
   }
   &__social a {

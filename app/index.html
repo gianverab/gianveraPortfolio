@@ -23,15 +23,17 @@
 </head>
 <body>
   <header class="header" id="top">
-    <div class="header__logo">
-      <h1><a href="index.html">Giancarlo Vera</a></h1>
+    <div class="wrapperWide">
+      <div class="header__logo">
+        <h1><a href="index.html">Giancarlo Vera</a></h1>
+      </div>
+      <nav class="header__nav">
+        <ul>
+          <li class="active"><a href="#about">About</a></li>
+          <li><a href="#work">Work</a></li>
+        </ul>
+      </nav>
     </div>
-    <nav class="header__nav">
-      <ul>
-        <li class="active"><a href="#about">About</a></li>
-        <li><a href="#work">Work</a></li>
-      </ul>
-    </nav>
   </header>
 
   <div class="large-hero">
@@ -89,8 +91,9 @@
     </div>
   </section>
 
-  <div class="outerWrapper">
-    <footer class="footer">
+
+  <footer class="footer">
+    <div class="wrapperWide">
       <div class="footer__top">
         <img src="img/logo-white.svg" alt="Giancarlo Vera">
         <a href="#top" id="goTop"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
@@ -98,18 +101,24 @@
       <div class="footer__legal">
         <p>&copy; 2017 Giancarlo Vera</p>
       </div>
-      <div class="footer__contact">
-        <a href="mailto:gianverab@gmail.com">gianverab@gmail.com</a>
-      </div>
       <div class="footer__social">
         <p>
-          <a href="https://github.com/gianverab" target="_blank" title="Github"><i class="fa fa-github" aria-hidden="true"></i></a>
-          <a href="https://twitter.com/gianvera" target="_blank" title="Twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
-          <a href="https://www.linkedin.com/in/gianvera/" target="_blank" title="Linkedin"><i class="fa fa-linkedin-square" aria-hidden="true"></i></a>
+          <a href="https://github.com/gianverab" target="_blank" title="Fork me!">
+            <i class="fa fa-github" aria-hidden="true"></i>
+          </a>
+          <a href="https://twitter.com/gianvera" target="_blank" title="Follow me!">
+            <i class="fa fa-twitter" aria-hidden="true"></i>
+          </a>
+          <a href="https://www.linkedin.com/in/gianvera/" target="_blank" title="Join me!">
+            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          </a>
+          <a href="mailto:gianverab@gmail.com" title="Drop me a line!">
+            <i class="fa fa-envelope" aria-hidden="true"></i>
+          </a>
         </p>
       </div>
-    </footer>
-  </div>
+    </div>
+  </footer>
 
 	<!-- CUSTOM SCRIPTS -->
     <script src="js/app.min.js"></script>

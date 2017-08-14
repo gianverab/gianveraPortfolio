@@ -1,9 +1,5 @@
 .header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: 0 auto;
+  
   &__logo a {
     background: url(../img/logo-dark.svg) no-repeat;
     width: 64px;

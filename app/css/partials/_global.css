@@ -28,8 +28,13 @@ section p {
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1em;
+  padding: 0 1.5em;
 }
-.outerWrapper {
-  background-color: #262228;
+.wrapperWide {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 1200px;
+  margin: 0 auto;
 }
