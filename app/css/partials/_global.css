@@ -28,7 +28,7 @@ section p {
 .wrapper {
   max-width: 960px;
   margin: 0 auto;
-  padding: 0 1.5em;
+  padding: 1.5em;
 }
 .wrapperWide {
   display: flex;

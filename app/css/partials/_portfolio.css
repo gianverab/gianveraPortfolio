@@ -1,0 +1,30 @@
+.portfolio {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(5, 1fr);
+  grid-gap: 1em;
+  height: 600px;
+  &__item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    background-color: salmon;
+  }
+  .item1 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .item2 {
+    grid-column: span 3;
+    grid-row: span 3;
+  }
+  .item3 {
+    grid-column: span 2;
+    grid-row: span 3;
+  }
+  .item4 {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+}
