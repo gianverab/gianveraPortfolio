@@ -1,6 +1,7 @@
 .large-hero {
-  background-color: #dfdce3;
-  min-height: 70vh;
+  background: url(../img/hero_bg.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
   display: flex;
   align-items: center;
   &__title {
@@ -9,6 +10,5 @@
   &__subtitle {
     font-family: 'Slabo 27px', serif;
     font-size: 2.7em;
-    margin: 0.225em 0;
   }
 }
