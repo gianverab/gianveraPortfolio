@@ -3,6 +3,7 @@
 }
 body {
 	font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
   font-weight: 300;
   color: #262228;
 }
@@ -37,4 +38,5 @@ section p {
   flex-wrap: wrap;
   max-width: 1200px;
   margin: 0 auto;
+  padding: 0 0.5em;
 }

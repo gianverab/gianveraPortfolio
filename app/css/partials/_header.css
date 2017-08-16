@@ -1,12 +1,17 @@
 .header {
-  
-  &__logo a {
-    background: url(../img/logo-dark.svg) no-repeat;
-    width: 64px;
-    height: 64px;
-    background-size: cover;
-    text-indent: -9999px;
-    display: block;
+
+  &__logo {
+    h1 {
+      margin: 6px 0;
+    }
+    a {
+      background: url(../img/logo-dark.svg) no-repeat;
+      width: 64px;
+      height: 64px;
+      background-size: cover;
+      text-indent: -9999px;
+      display: block;
+    }
   }
   &__nav {
     ul {
@@ -15,23 +20,27 @@
     }
     li {
       display: inline-block;
+      margin-left: 0.5em;
+      &:first-child {
+        margin-left: 0;
+      }
       &.active a {
-        border: 2px solid #0375b4;
-        background-color: #0375b4;
-        color: #fff;
+        border-bottom: 3px solid #0375b4;
       }
     }
     a {
+      font-size: 1.8em;
       text-decoration: none;
       letter-spacing: 1px;
-      padding: 0.45em 1.8em;
+      padding: 0.25em 0.5em;
       color: #0375b4;
-      margin-left: 4px;
-      border-radius: 30px;
-      border: 2px solid #fff;
+      border-bottom: 2px solid transparent;
       transition: all 0.5s ease-in-out;
       &:hover {
-        border: 2px solid #0375b4;
+        border-bottom: 3px solid #0375b4;
+      }
+      span {
+        display: none;
       }
     }
   }
