@@ -2,12 +2,13 @@
   background-color: #262228;
   color: #fff;
   margin-top: 1em;
+  padding: 0.5em 0.5em 1em;
   a {
     color: #fff;
     text-decoration: none;
   }
   #goTop {
-    font-size: 1.8em;
+    font-size: 2em;
   }
   &__top {
     flex: 1 1 100%;
@@ -19,12 +20,24 @@
       height: auto;
     }
   }
-  &__social a {
-    font-size: 1.8em;
-    margin: 0 0.2rem;
-    transition: all 0.5s ease-in-out;;
-    &:hover {
-      color: #f7b733;
+  &__legal {
+    flex: 1 1 100%;
+    text-align: center;
+    font-size: 1.2em;
+  }
+  &__social{
+    flex: 1 1 100%;
+    display: flex;
+    justify-content: space-around;
+
+    a {
+     font-size: 1.8em;
+     margin: 0 0.2rem;
+     transition: all 0.5s ease-in-out;;
+       &:hover {
+         color: #f7b733;
+       }
     }
+
   }
 }

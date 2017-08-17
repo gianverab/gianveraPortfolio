@@ -6,7 +6,81 @@
     padding: 0 1em;
   }
   .footer {
-    padding: 0.5em 1em 0;
+    padding: 0.5em 1em;
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    &__top {
+      flex: 1 1 100%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      img {
+        width: 64px;
+        height: auto;
+      }
+    }
+    &__social a {
+      font-size: 1.8em;
+      margin: 0 0.2rem;
+      transition: all 0.5s ease-in-out;;
+      &:hover {
+        color: #f7b733;
+      }
+    }
+  }
+  .portfolio {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-gap: 1em;
+    height: 600px;
+    &__item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-flow: column wrap;
+      color: #fff;
+    }
+    &__title {
+      font-size: 1.6em;
+    }
+    &__description {
+      margin: 0;
+    }
+    &__link {
+      color: #fff;
+      font-size: 2em;
+    }
+    .item1 {
+      grid-column: span 2;
+      grid-row: span 2;
+      background: url(../img/project_tiendalatam.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .item2 {
+      grid-column: span 3;
+      grid-row: span 3;
+      background: url(../img/project_imcg.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .item3 {
+      grid-column: span 2;
+      grid-row: span 3;
+      background: url(../img/project_valvoline.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
+    .item4 {
+      grid-column: span 3;
+      grid-row: span 2;
+      background: url(../img/project_sidesys.jpg) no-repeat;
+      background-size: cover;
+      background-position: center;
+    }
   }
 }
 @media screen and (min-width: 1200px)  {
