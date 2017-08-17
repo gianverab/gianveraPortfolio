@@ -1,5 +1,6 @@
 .header {
-
+  position: fixed;
+  width: 100%;
   &__logo {
     h1 {
       margin: 6px 0;

@@ -1,11 +1,14 @@
 .large-hero {
-  background: url(../img/hero_bg.jpg) no-repeat;
-  background-size: cover;
-  height: calc(100vh - 76px);
-  display: flex;
-  align-items: center;
-  color: #fff;
-  padding: 0 1em;
+  padding-top: 76px;
+  &__container {
+    background: url(../img/hero_bg.jpg) no-repeat;
+    background-size: cover;
+    height: calc(100vh - 76px);
+    display: flex;
+    align-items: center;
+    color: #fff;
+    padding: 0 1em;
+  }
   &__title {
     margin: 0;
     color: #f7b733;

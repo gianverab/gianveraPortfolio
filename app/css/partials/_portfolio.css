@@ -13,9 +13,11 @@
   }
   &__title {
     font-size: 1.6em;
+    font-weight: 500;
+    margin: 0.5em 0;
   }
   &__description {
-    margin: 0;
+    margin: 0.5em 0;
   }
   &__link {
     color: #fff;
