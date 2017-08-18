@@ -35,17 +35,17 @@ ul {
   padding: 0 0.5em;
 }
 .section {
-  padding-top: 76px;
+  padding-top: 64px;
   &#next {
     padding-top: 26px;
   }
   &__title {
     text-align: center;
-    font-size: 2.2em;
+    font-size: 2em;
     font-weight: 500;
   }
   &__text {
-    font-size: 1.3em;
+    font-size: 1.2em;
     line-height: 1.6;
   }
 }
