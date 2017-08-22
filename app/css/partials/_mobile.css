@@ -1,3 +1,4 @@
+//Generic Media Queries
 @media screen and (min-width: 375px) {
   .large-hero__container {
     padding: 0 2em;
@@ -5,129 +6,44 @@
 }
 @media screen and (min-width: 600px) {
   .header__logo h1 {
-    margin: 10px 0;
+    margin: 12px 0;
   }
-  .header__nav a {
-    font-size: 2.2em;
-  }
-  .section, .large-hero {
-    padding-top: 72px;
-  }
-  .large-hero__container {
-    height: calc(100vh - 72px);
+  .large-hero__avatar img {
+    width: 280px;
+    height: 280px;
   }
   .large-hero__title {
-    font-size: 3em;
+    font-size: 2.6em;
   }
   .large-hero__subtitle {
-    font-size: 2.8em;
-    line-height: 1.5;
+    font-size: 2.4em;
   }
-  .section__title {
-    font-size: 2.5em;
+  .section, .large-hero {
+    padding-top: 60px;
   }
-  .section__text {
-    font-size: 1.6em;
+  .large-hero__container {
+    height: calc(100vh - 60px);
   }
   .portfolio {
     height: 1200px;
   }
-  .portfolio__title {
-    font-size: 2.2em;
-  }
-  .portfolio__description {
-    font-size: 1.8em;
-  }
-  .portfolio__link {
-    font-size: 3em;
-  }
-  .footer__legal {
+}
+@media screen and (min-width: 720px) {
+  .header__nav a {
     font-size: 1.6em;
   }
   .footer__social {
     justify-content: center;
   }
-  .footer__social a {
-    margin: 0 0.8em;
-    font-size: 2.4em;
-  }
 }
-@media screen and (min-width: 720px) {
-  .header__logo h1 {
-    margin: 12px 0;
-  }
-  .header__logo a {
-    width: 64px;
-    height: 64px;
-  }
-  .header__nav a {
-    font-size: 2.4em;
-  }
-  .section, .large-hero {
-    padding-top: 88px;
-  }
-  .large-hero__container {
-    height: calc(100vh - 88px);
-  }
-  .large-hero__title {
-    font-size: 3.5em;
-  }
-  .large-hero__subtitle {
-    font-size: 3em;
-    line-height: 1.5;
-  }
-  .section__title {
-    font-size: 3em;
-  }
-  .section__text {
-    font-size: 2em;
-  }
-  .portfolio {
-    height: 1600px;
-  }
-  .portfolio__title {
-    font-size: 2.6em;
-  }
-  .portfolio__description {
-    font-size: 2em;
-  }
-  .portfolio__link {
-    font-size: 3.5em;
-  }
-  .footer__legal {
-    font-size: 2em;
-  }
-  .footer__social {
-    justify-content: center;
-  }
-  .footer__social a {
-    font-size: 3em;
-  }
-}
-@media screen and (min-width: 768px)  {
+@media screen and (min-width: 768px) {
   .header {
     padding: 0 1em;
-  }
-  .large-hero__title {
-    font-size: 3.2em;
-  }
-  .large-hero__subtitle {
-    font-size: 2.8em;
-    line-height: 1.5;
   }
   .portfolio {
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(4, 1fr);
-    height: 800px;
-  }
-  .portfolio__title {
-    font-size: 2em;
-  }
-  .portfolio__description {
-    font-size: 1.8em;
-  }
-  .portfolio__link {
-    font-size: 3em;
+    height: 600px;
   }
   .portfolio .item1 {
     grid-column: span 2;
@@ -146,80 +62,71 @@
     grid-row: span 2;
   }
   .footer {
-    padding: 0.5em 1em;
-  }
-}
-@media screen and (min-width: 800px)  {
-  .header__logo h1 {
-    margin: 14px 0;
-  }
-  .header__logo a {
-    width: 72px;
-    height: 72px;
-  }
-  .header__nav a {
-    font-size: 2.7em;
-  }
-  .section, .large-hero {
-    padding-top: 100px;
-  }
-  .large-hero__container {
-    height: calc(100vh - 100px);
-  }
-  .large-hero__subtitle {
-    font-size: 2.9em;
-    line-height: 1.5;
-  }
-  .section__title {
-    font-size: 3.2em;
-  }
-  .section__text {
-    font-size: 2.2em;
-  }
-  .portfolio__title {
-    font-size: 2.2em;
-  }
-  .footer {
     padding: 1em;
   }
-  .footer__top img {
-    width: 72px;
-    height: auto;
-  }
 }
-@media screen and (min-width: 1024px)  {
+@media screen and (min-width: 1024px) {
   .large-hero__container {
-    padding: 0 4em;
+    padding: 0 3em;
+    height: calc(94vh - 60px);
+  }
+  .large-hero__avatar img {
+    width: 220px;
+    height: 220px;
   }
   .large-hero__title {
-    font-size: 3.5em;
+    font-size: 2.4em;
   }
   .large-hero__subtitle {
-    font-size: 3.2em;
-    line-height: 1.5;
-  }
-  .portfolio__title {
-    font-size: 2.5em;
-  }
-  .footer {
-    padding: 1em;
-  }
-  .footer__top img {
-    width: 72px;
-    height: auto;
+    font-size: 2em;
   }
   .footer__legal, .footer__social {
     flex: inherit;
   }
   .footer__social a {
-    margin: 0 0.4em;
+    margin: 0 0.25em;
   }
 }
-@media screen and (min-width: 1200px)  {
+@media screen and (min-width: 1080px) {
+  .portfolio {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  .portfolio .item1 {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+  .portfolio .item2 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .portfolio .item3 {
+    grid-column: span 2;
+    grid-row: span 2;
+  }
+  .portfolio .item4 {
+    grid-column: span 3;
+    grid-row: span 2;
+  }
+}
+@media screen and (min-width: 1200px) {
   .header {
     padding: 0;
   }
   .footer {
     padding: 0.5em 0;
+  }
+}
+
+//Devices Media QUeries
+/* iPhone 4 */
+@media screen
+  and (min-device-width: 320px)
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+  .large-hero__avatar img {
+    width: 100px;
+    height: 100px;
   }
 }

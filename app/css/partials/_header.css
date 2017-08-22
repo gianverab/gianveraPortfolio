@@ -1,14 +1,15 @@
 .header {
   position: fixed;
   width: 100%;
+  background-color: #262228;
   &__logo {
     h1 {
-      margin: 0;
+      margin: 8px 0;
     }
     a {
-      background: url(../img/logo-dark.svg) no-repeat;
-      width: 52px;
-      height: 52px;
+      background: url(../img/logo-white.svg) no-repeat;
+      width: 36px;
+      height: 36px;
       background-size: cover;
       text-indent: -9999px;
       display: block;
@@ -26,7 +27,8 @@
         margin-left: 0;
       }
       &.active a {
-        border-bottom: 3px solid #0375b4;
+        color: #f7b733;
+        border-bottom: 3px solid #f7b733;
       }
     }
     a {
@@ -34,11 +36,11 @@
       text-decoration: none;
       letter-spacing: 1px;
       padding: 0.2em 0.4em 0.1em;
-      color: #0375b4;
+      color: #c6c6c6;
       border-bottom: 2px solid transparent;
-      transition: all 0.5s ease-in-out;
+      transition: color 0.5s ease-in-out;
       &:hover {
-        border-bottom: 3px solid #0375b4;
+        color: #fff;
       }
       span {
         display: none;
