@@ -17,6 +17,8 @@ var cssDest = './build/css/'
 var imgSrc = './app/img/*'
 var imgDest = './build/img/'
 var htmlSrc = './app/*.html'
+var fontSrc = './app/fonts/*'
+var fontDest = './build/fonts/'
 var build = './build/'
 
 // CSS Workflow
@@ -39,6 +41,12 @@ gulp.task('html', function () {
     .pipe(gulp.dest(build))
 })
 
+// Fonts
+gulp.task('fonts', function () {
+  return gulp.src(fontSrc)
+    .pipe(gulp.dest(fontDest))
+})
+
 // Minify any new images
 gulp.task('images', function () {
   return gulp.src(imgSrc)
@@ -48,7 +56,7 @@ gulp.task('images', function () {
 })
 
 // Server set up and reload
-gulp.task('serve', ['styles', 'html', 'images'], function () {
+gulp.task('serve', ['html', 'styles', 'fonts', 'images'], function () {
   browsersync.init({
     server: build
   })

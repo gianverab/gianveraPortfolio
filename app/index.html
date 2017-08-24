@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-    <meta name="description" content="My personal portfolio. Here you will find the stuff I made and the projects I working on.">
+    <meta name="description" content="Web portfolio of Giancarlo Vera. Here you will find the stuff I made and the projects I working on.">
     <meta name="author" content="Giancarlo Vera">
     <!--[if IE]>
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
@@ -29,11 +29,11 @@
       </div>
       <nav class="header__nav">
         <ul>
-          <li class="active"><a href="#top"><span>Home</span> <i class="fa fa-home" aria-hidden="true"></i></a></li>
-          <li><a href="#about"><span>About</span> <i class="fa fa-user-circle-o" aria-hidden="true"></i></a></li>
-          <li><a href="#work"><span>Work</span> <i class="fa fa-briefcase" aria-hidden="true"></i></a></li>
+          <li class="active"><a href="#top"><span>Home</span> <i class="icon-home"></i></a></li>
+          <li><a href="#about"><span>About</span> <i class="icon-user"></i></a></li>
+          <li><a href="#work"><span>Work</span> <i class="icon-folio"></i></a></li>
         </ul>
-      </nav>
+      </nav
     </div>
   </header>
 
@@ -48,8 +48,8 @@
           A frontend developer living in Buenos Aires, who is passionate about JavaScript ecosystem,
           enjoys coding and birdwatching.
         </h2>
-        <a href="#about" id="goTop" class="large-hero__arrow">
-          <i class="fa fa-chevron-down" aria-hidden="true"></i>
+        <a href="#about" class="large-hero__arrow">
+          <i class="icon-circle-down"></i>
         </a>
       </div>
     </div>
@@ -58,6 +58,7 @@
   <section id="about" class="section">
     <div class="wrapper">
       <h2 class="section__title">Who I Am</h2>
+      <div class="section__icon"><i class="icon-info"></i></div>
       <p class="section__text">I have a bachelor degree in Biology, from San Marcos National University in Peru,
         with mention in Zoology (Ornithology).</p>
       <p class="section__text">After a few years studying ecology of different species of birds,
@@ -65,6 +66,9 @@
         I moved to Argentina where I found my other passion in life: <em>coding</em>.</p>
       <p class="section__text">I worked as a freelancer since the early years of web development, coding web templates for different clients with just HTML/CSS.
       Over time I added JavaScript to my skill set, expanding my chances of being able to work on more complex projects.</p>
+      <p class="section__text">Always in constant training, that is why I am increasing my skills in React, Node and GraphQl,
+        technologies that will allow me to create robust applications that solve real people needs.<br>
+        One of my goals is to keep going in coding for good.</p>
       <p class="section__text">Father of a lovely and smart daughter of five years old,
         I spend part of my free time watching nature tv shows and cartoons with her.</p>
     </div>
@@ -73,6 +77,7 @@
   <section id="work" class="section">
     <div class="wrapper">
       <h2 class="section__title">What I done</h2>
+      <div class="section__icon"><i class="icon-image"></i></div>
       <p class="section__text">Here you find some of the projects I worked on the last couple years. </p>
       <div class="portfolio">
         <article class="portfolio__item item1">
@@ -81,7 +86,7 @@
             HTML/CSS/JavaScript
           </p>
           <a href="http://www.tiendalatam.com/" class="portfolio__link" target="_blank">
-            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+            <i class="icon-point-up"></i>
           </a>
         </article>
         <article class="portfolio__item item2">
@@ -90,7 +95,7 @@
             HTML/CSS/JavaScript
           </p>
           <a href="http://www.imcgconsulting.com/" class="portfolio__link" target="_blank">
-            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+            <i class="icon-point-up"></i>
           </a>
         </article>
         <article class="portfolio__item item3">
@@ -99,7 +104,7 @@
             HTML/CSS/JavaScript
           </p>
           <a href="http://valvoline.com.ar/" class="portfolio__link" target="_blank">
-            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+            <i class="icon-point-up"></i>
           </a>
         </article>
         <article class="portfolio__item item4">
@@ -108,42 +113,34 @@
             HTML/CSS/JavaScript
           </p>
           <a href="http://www.sidesys.com/" class="portfolio__link" target="_blank">
-            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+            <i class="icon-point-up"></i>
           </a>
         </article>
       </div>
     </div>
   </section>
 
-  <section id="next" class="section">
-    <div class="wrapper">
-      <h2 class="section__title">What's Next</h2>
-      <p class="section__text">Always in constant training, that is why I am increasing my skills in React, Node and GraphQl,
-        technologies that will allow me to create robust applications that solve real people needs.<br>
-        One of my goals is to keep going in coding for good.</p>
-    </div>
-  </section>
   <footer class="footer">
     <div class="wrapperWide">
       <div class="footer__top">
         <img src="img/logo-white.svg" alt="Giancarlo Vera">
-        <a href="#top" id="goTop"><i class="fa fa-chevron-up" aria-hidden="true"></i></a>
+        <a href="#top" id="goTop"><i class="icon-circle-up"></i></a>
       </div>
       <div class="footer__legal">
         <p>&copy; 2017 Giancarlo Vera</p>
       </div>
       <div class="footer__social">
           <a href="https://github.com/gianverab" target="_blank" title="Fork me!">
-            <i class="fa fa-github" aria-hidden="true"></i>
+            <i class="icon-github"></i>
           </a>
           <a href="https://twitter.com/gianvera" target="_blank" title="Follow me!">
-            <i class="fa fa-twitter" aria-hidden="true"></i>
+            <i class="icon-twitter"></i>
           </a>
-          <a href="https://www.linkedin.com/in/gianvera/" target="_blank" title="Join me!">
-            <i class="fa fa-linkedin-square" aria-hidden="true"></i>
+          <a class="largeIcon" href="https://www.linkedin.com/in/gianvera/" target="_blank" title="Join me!">
+            <i class="icon-linkedin"></i>
           </a>
           <a href="mailto:gianverab@gmail.com" title="Drop me a line!">
-            <i class="fa fa-envelope" aria-hidden="true"></i>
+            <i class="icon-contact"></i>
           </a>
       </div>
     </div>

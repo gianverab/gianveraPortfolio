@@ -6,7 +6,7 @@
     height: calc(100vh - 52px);
     display: flex;
     flex-flow: column nowrap;
-    color: #fff;
+    text-shadow: 1px 1px 1px rgba(17, 17, 17, 0.36);
     padding: 0 1em;
   }
   &__avatar {
@@ -20,6 +20,7 @@
       height: 150px;
       border-radius: 50%;
       border: 6px solid #fff;
+      box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.65), -4px -4px 10px 0px rgba(50, 50, 50, 0.55);;
     }
   }
   &__text {
@@ -30,7 +31,6 @@
   }
   &__title {
     margin: 0;
-    color: #f7b733;
     font-size: 1.5em;
     font-weight: 500;
   }
@@ -42,9 +42,10 @@
     font-weight: 400;
   }
   &__arrow {
-    color: #fff;
+    color: #262228;
     font-size: 1.8em;
     text-align: center;
     display: block;
+    text-decoration: none;
   }
 }
