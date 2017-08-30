@@ -2,7 +2,7 @@
 @import "partials/_icomoon";
 @import "partials/_global";
 @import "partials/_header";
-@import "partials/_hero";
+@import "partials/_hero.css";
 @import "partials/_footer";
+@import "partials/_section";
 @import "partials/_portfolio";
-@import "partials/_mobile";

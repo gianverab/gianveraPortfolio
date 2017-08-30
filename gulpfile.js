@@ -1,13 +1,15 @@
 // Include Dependencies
 var gulp = require('gulp')
 var postcss = require('gulp-postcss')
-var cssvars = require('postcss-simple-vars')
-var nested = require('postcss-nested')
+var rucksack = require('rucksack-css')
+var cssnext = require('postcss-cssnext')
+var cssnested = require('postcss-nested')
 var importcss = require('postcss-import')
-var autoprefixer = require('gulp-autoprefixer')
 var newer = require('gulp-newer')
 var imagemin = require('gulp-imagemin')
 var rename = require('gulp-rename')
+var csswring = require('csswring')
+var mqpacker = require('css-mqpacker')
 var sourcemaps = require('gulp-sourcemaps')
 var browsersync = require('browser-sync').create()
 
@@ -23,16 +25,23 @@ var build = './build/'
 
 // CSS Workflow
 gulp.task('styles', function () {
+  var plugins = [
+    importcss,
+    cssnested,
+    rucksack(),
+    cssnext({
+      browsers: ['> 5%', 'ie 8']
+    }),
+    mqpacker(),
+    csswring()
+  ]
   return gulp.src(cssSrc)
-    .pipe(sourcemaps.init())
-    .pipe(postcss([importcss, cssvars, nested]))
-    .pipe(autoprefixer({
-      browsers: ['last 10 versions'],
-      cascade: false
-    }))
+    //.pipe(sourcemaps.init())
+    .pipe(postcss(plugins))
     .pipe(rename('app.min.css'))
-    .pipe(sourcemaps.write('./'))
+    //.pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(cssDest))
+    .pipe(browsersync.stream())
 })
 
 // HTML Workflow
@@ -45,6 +54,7 @@ gulp.task('html', function () {
 gulp.task('fonts', function () {
   return gulp.src(fontSrc)
     .pipe(gulp.dest(fontDest))
+    .pipe(browsersync.stream())
 })
 
 // Minify any new images
@@ -53,18 +63,26 @@ gulp.task('images', function () {
     .pipe(newer(imgDest))
     .pipe(imagemin({ optimizationLevel: 5 }))
     .pipe(gulp.dest(imgDest))
+    .pipe(browsersync.stream())
 })
 
 // Server set up and reload
-gulp.task('serve', ['html', 'styles', 'fonts', 'images'], function () {
+gulp.task('serve', ['styles', 'html', 'fonts', 'images'], function () {
   browsersync.init({
-    server: build
+    server: {
+      baseDir: './build'
+    }
   })
+})
+
+// Watch for changes
+gulp.task('watch', function () {
   gulp.watch('./app/css/**/*.css', ['styles'])
-  gulp.watch('./build/css/*.css').on('change', browsersync.reload)
   gulp.watch(htmlSrc, ['html'])
+  gulp.watch(fontSrc, ['fonts'])
+  gulp.watch(imgSrc, ['images'])
   gulp.watch(build + '*.html').on('change', browsersync.reload)
 })
 
 // Default gulp command
-gulp.task('default', ['serve'])
+gulp.task('default', ['watch', 'serve'])

@@ -1,10 +1,18 @@
-.header {
+.mainHeader {
   position: fixed;
   width: 100%;
-  background-color: #262228;
-  &__logo {
-    h1 {
-      margin: 8px 0;
+  background-color: var(--color-dark);
+  z-index: 20;
+  @media (--ipad) {
+    padding: 0 1em;
+  }
+  @media (--desktop) {
+    padding: 0;
+  }
+  &-logo {
+    margin: 8px 0;
+    @media (--ipad) {
+      margin: 12px 0;
     }
     a {
       background: url(../img/logo-white.svg) no-repeat;
@@ -15,35 +23,50 @@
       display: block;
     }
   }
-  &__nav {
-    ul {
-      padding: 0;
-      margin: 0;
+  &-menu {
+    padding: 0;
+    margin: 0;
+  }
+  &-menuItem {
+    display: inline-block;
+    margin-left: 0.5em;
+    &:first-child {
+      margin-left: 0;
     }
-    li {
-      display: inline-block;
-      margin-left: 0.5em;
-      &:first-child {
-        margin-left: 0;
-      }
-      &.active a {
-        color: #f7b733;
-        border-bottom: 3px solid #f7b733;
+    &.active a {
+      color: var(--color-light);
+      border-bottom: 2px solid var(--color-light);
+      &:hover {
+        color: var(--color-light);
       }
     }
     a {
+      display: flex;
+      align-items: baseline;
       font-size: 1.4em;
       text-decoration: none;
       letter-spacing: 1px;
-      padding: 0.2em 0.4em 0.1em;
-      color: #c6c6c6;
+      padding: 0.2em 0 0.1em;
+      color: var(--color-grey);
       border-bottom: 2px solid transparent;
       transition: color 0.5s ease-in-out;
+      @media (--ipad) {
+        font-size: 1.6em;
+      }
       &:hover {
         color: #fff;
       }
-      span {
-        display: none;
+      > * {
+        padding: 0 0.2em;
+      }
+    }
+    span {
+      display: none;
+      @media (--ipadPro) {
+        display: inline-block;
+        font-size: .6em;
+        font-weight: 300;
+        text-transform: uppercase;
       }
     }
   }

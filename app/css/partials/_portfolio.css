@@ -3,8 +3,17 @@
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(8, 1fr);
   grid-gap: 1em;
-  height: 800px;
-  &__item {
+  height: 1000px;
+  @media (--ipad) {
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    height: 600px;
+  }
+  @media (--phoneL) {
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+  }
+  &-item {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -15,8 +24,7 @@
     &::before {
       content: '';
       display: block;
-      background-color: #0375b4;
-      opacity: 0.2;
+      background-color: color(var(--color-base) alpha(-80%));
       position: absolute;
       top: 0;
       right: 0;
@@ -26,17 +34,17 @@
       transition: all ease-in-out 0.5s;
     }
     &:hover::before {
-      opacity: 0.8;
+      background-color: color(var(--color-base) alpha(-20%));
     }
-    &:hover .portfolio__description {
+    &:hover .portfolio-description {
       transform: scale(1);
       opacity: 1;
     }
-    &:hover .portfolio__title {
+    &:hover .portfolio-title {
       transform: translateY(0.5em);
     }
   }
-  &__title {
+  &-title {
     font-size: 1.6em;
     font-weight: 500;
     margin: 0.5em 0;
@@ -44,20 +52,20 @@
     transform: translateY(0.75em);
     transition: all ease-in-out 0.5s;
   }
-  &__description {
+  &-description {
     margin: 0.5em 0;
     text-shadow: 1px 1px 1px rgba(17, 17, 17, 0.36);
     opacity: 0.1;
     transform: scale(0.1);
     transition: all ease-in-out 0.5s;
   }
-  &__link {
+  &-link {
     color: #fff;
     font-size: 1.8em;
     text-decoration: none;
     text-shadow: 1px 1px 1px rgba(17, 17, 17, 0.36);
     &:hover {
-      color: #f7b733;
+      color: var(--color-light);
     }
   }
   .item1 {
@@ -66,6 +74,14 @@
     background: url(../img/project_tiendalatam.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    @media (--ipad) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    @media (--phoneL) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
   }
   .item2 {
     grid-column: span 2;
@@ -73,6 +89,14 @@
     background: url(../img/project_imcg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    @media (--ipad) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    @media (--phoneL) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
   }
   .item3 {
     grid-column: span 2;
@@ -80,6 +104,14 @@
     background: url(../img/project_valvoline.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    @media (--ipad) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    @media (--phoneL) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
   }
   .item4 {
     grid-column: span 2;
@@ -87,5 +119,13 @@
     background: url(../img/project_sidesys.jpg) no-repeat;
     background-size: cover;
     background-position: center;
+    @media (--ipad) {
+      grid-column: span 2;
+      grid-row: span 2;
+    }
+    @media (--phoneL) {
+      grid-column: span 3;
+      grid-row: span 2;
+    }
   }
 }

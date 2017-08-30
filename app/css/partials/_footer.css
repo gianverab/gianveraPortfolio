@@ -1,8 +1,14 @@
 .footer {
-  background-color: #262228;
+  background-color: var(--color-dark);
   color: #fff;
   margin-top: 52px;
   padding: 0.5em 0.5em 1.5em;
+  @media (--ipad) {
+    padding: 1em;
+  }
+  @media (--desktop) {
+    padding: 0.5em 0;
+  }
   a {
     color: #fff;
     text-decoration: none;
@@ -10,7 +16,7 @@
   #goTop {
     font-size: 1.8em;
   }
-  &__top {
+  &-top {
     flex: 1 1 100%;
     display: flex;
     justify-content: space-between;
@@ -21,25 +27,34 @@
       height: auto;
     }
   }
-  &__legal {
+  &-legal {
     flex: 1 1 100%;
     text-align: center;
-    font-size: 0.9em;
+    font-size: 0.8em;
+    font-weight: 300;
+    @media (--ipadPro) {
+      flex: inherit;
+    }
   }
-  &__social{
+  &-social{
     flex: 1 1 100%;
     display: flex;
     justify-content: center;
-
+    @media (--ipadPro) {
+      flex: inherit;
+    }
     a {
      font-size: 1.6em;
      margin: 0 0.5em;
      transition: all 0.5s ease-in-out;
+     @media (--ipadPro) {
+       margin: 0 0.25em;
+     }
        &:last-child {
          margin-right: 1px;
        }
        &:hover {
-         color: #f7b733;
+         color: var(--color-light);
        }
        &.largeIcon {
          font-size: 1.5em;

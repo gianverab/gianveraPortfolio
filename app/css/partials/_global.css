@@ -1,3 +1,17 @@
+/* Variables */
+:root {
+  --color-base: #1a62f6;
+  --color-dark: #050b18;
+  --color-light: #f7b733;
+  --color-grey: #c4c8d0;
+}
+/* Custom Media queries */
+@custom-media --phoneM (min-width: 600px);
+@custom-media --ipad (min-width: 768px);
+@custom-media --ipadPro (min-width: 1024px);
+@custom-media --phoneL (min-width: 1080px);
+@custom-media --desktop (min-width: 1200px);
+
 * {
   box-sizing: border-box;
 }
@@ -5,7 +19,7 @@ body {
 	font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   font-weight: 300;
-  color: #262228;
+  color: var(--color-dark);
   padding-top: 76px;
   margin-top: -76px;
 }
@@ -33,33 +47,4 @@ ul {
   max-width: 1200px;
   margin: 0 auto;
   padding: 0 0.5em;
-}
-.section {
-  padding-top: 64px;
-  &#next {
-    padding-top: 26px;
-  }
-  &__title {
-    text-align: center;
-    font-size: 2em;
-    font-weight: 500;
-    margin: 0.5em 0;
-  }
-  &__icon {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: #fff;
-    background-color: #0375b4;
-    width: 64px;
-    height: 64px;
-    margin: 0 auto;
-    font-size: 2.4em;
-    border-radius: 50%;
-    box-shadow: 1px 1px 1px 0px rgba(50, 50, 50, 0.65), -1px -1px 1px 0px rgba(50, 50, 50, 0.65);
-  }
-  &__text {
-    font-size: 1.2em;
-    line-height: 1.6;
-  }
 }

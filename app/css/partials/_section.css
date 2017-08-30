@@ -1,0 +1,30 @@
+.section {
+  padding-top: 52px;
+  @media (--ipad) {
+    padding-top: 60px;
+  }
+  &-title {
+    text-align: center;
+    font-size: responsive 22px 32px;
+    font-range: 320px 1024px;
+    font-weight: 500;
+    margin: 0.5em 0;
+  }
+  &-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    background-color: var(--color-base);
+    width: 64px;
+    height: 64px;
+    margin: 0 auto;
+    font-size: 2.2em;
+    border-radius: 50%;
+  }
+  &-paragraph {
+    font-size: responsive 16px 18px;
+    font-range: 320px 1024px;
+    line-height: 1.6;
+  }
+}

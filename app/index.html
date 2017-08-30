@@ -11,7 +11,7 @@
     <title>Giancarlo Vera | Frontend Developer</title>
 
        <!-- CUSTOM CSS -->
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans:400|Quattrocento" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:500|Open+Sans:300,400|Quattrocento" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/app.min.css">
 
@@ -22,33 +22,35 @@
     <![endif]-->
 </head>
 <body>
-  <header class="header">
+  <header class="mainHeader">
     <div class="wrapperWide">
-      <div class="header__logo">
-        <h1><a href="index.html">Giancarlo Vera</a></h1>
+      <div>
+        <h1 class="mainHeader-logo">
+          <a href="index.html">Giancarlo Vera</a>
+        </h1>
       </div>
-      <nav class="header__nav">
-        <ul>
-          <li class="active"><a href="#top"><span>Home</span> <i class="icon-home"></i></a></li>
-          <li><a href="#about"><span>About</span> <i class="icon-user"></i></a></li>
-          <li><a href="#work"><span>Work</span> <i class="icon-folio"></i></a></li>
+      <nav>
+        <ul class="mainHeader-menu">
+          <li class="mainHeader-menuItem active"><a href="#top"><span>Home</span> <i class="icon-home"></i></a></li>
+          <li class="mainHeader-menuItem"><a href="#about"><span>About</span> <i class="icon-user"></i></a></li>
+          <li class="mainHeader-menuItem"><a href="#work"><span>Work</span> <i class="icon-folio"></i></a></li>
         </ul>
       </nav
     </div>
   </header>
 
-  <div class="large-hero" id="top">
-    <div class="large-hero__container">
-      <div class="large-hero__avatar">
+  <div class="largeHero" id="top">
+    <div class="largeHero-container">
+      <div class="largeHero-avatar">
         <img src="img/avatar_gianvera.jpg" alt="Giancarlo Vera's avatar">
       </div>
-      <div class="large-hero__text">
-        <h1 class="large-hero__title">Hi! I'm Giancarlo</h1>
-        <h2 class="large-hero__subtitle">
+      <div class="largeHero-text">
+        <h1 class="largeHero-title">Hi! I'm Giancarlo</h1>
+        <h2 class="largeHero-subtitle">
           A frontend developer living in Buenos Aires, who is passionate about JavaScript ecosystem,
           enjoys coding and birdwatching.
         </h2>
-        <a href="#about" class="large-hero__arrow">
+        <a href="#about" class="largeHero-arrow">
           <i class="icon-circle-down"></i>
         </a>
       </div>
@@ -57,62 +59,63 @@
 
   <section id="about" class="section">
     <div class="wrapper">
-      <h2 class="section__title">Who I Am</h2>
-      <div class="section__icon"><i class="icon-info"></i></div>
-      <p class="section__text">I have a bachelor degree in Biology, from San Marcos National University in Peru,
-        with mention in Zoology (Ornithology).</p>
-      <p class="section__text">After a few years studying ecology of different species of birds,
+      <h2 class="section-title">Who I Am</h2>
+      <div class="section-icon"><i class="icon-info"></i></div>
+      <p class="section-paragraph">I have a bachelor degree in Biology with mention in Zoology,
+        from San Marcos National University in Peru.</p>
+      <p class="section-paragraph">After a few years studying ecology of some species of birds,
         mainly parrots and raptors from the Coast and Amazon rainforest of Peru,
         I moved to Argentina where I found my other passion in life: <em>coding</em>.</p>
-      <p class="section__text">I worked as a freelancer since the early years of web development, coding web templates for different clients with just HTML/CSS.
+      <p class="section-paragraph">I worked as a freelancer since the early years of web development,
+        coding web templates for different clients with just HTML/CSS.
       Over time I added JavaScript to my skill set, expanding my chances of being able to work on more complex projects.</p>
-      <p class="section__text">Always in constant training, that is why I am increasing my skills in React, Node and GraphQl,
+      <p class="section-paragraph">Always in constant training, that is why I am increasing my skills in React, Node and GraphQl,
         technologies that will allow me to create robust applications that solve real people needs.<br>
         One of my goals is to keep going in coding for good.</p>
-      <p class="section__text">Father of a lovely and smart daughter of five years old,
+      <p class="section-paragraph">Father of a lovely and smart daughter of five years old,
         I spend part of my free time watching nature tv shows and cartoons with her.</p>
     </div>
   </section>
 
   <section id="work" class="section">
     <div class="wrapper">
-      <h2 class="section__title">What I done</h2>
-      <div class="section__icon"><i class="icon-image"></i></div>
-      <p class="section__text">Here you find some of the projects I worked on the last couple years. </p>
+      <h2 class="section-title">What I done</h2>
+      <div class="section-icon"><i class="icon-image"></i></div>
+      <p class="section-paragraph">Here you will find some of the projects I worked on the last couple years. </p>
       <div class="portfolio">
-        <article class="portfolio__item item1">
-          <h3 class="portfolio__title">Tienda Latam</h3>
-          <p class="portfolio__description">
+        <article class="portfolio-item item1">
+          <h3 class="portfolio-title">Tienda Latam</h3>
+          <p class="portfolio-description">
             HTML/CSS/JavaScript
           </p>
-          <a href="http://www.tiendalatam.com/" class="portfolio__link" target="_blank">
+          <a href="http://www.tiendalatam.com/" class="portfolio-link" target="_blank">
             <i class="icon-point-up"></i>
           </a>
         </article>
-        <article class="portfolio__item item2">
-          <h3 class="portfolio__title">IMCG Consulting</h3>
-          <p class="portfolio__description">
+        <article class="portfolio-item item2">
+          <h3 class="portfolio-title">IMCG Consulting</h3>
+          <p class="portfolio-description">
             HTML/CSS/JavaScript
           </p>
-          <a href="http://www.imcgconsulting.com/" class="portfolio__link" target="_blank">
+          <a href="http://www.imcgconsulting.com/" class="portfolio-link" target="_blank">
             <i class="icon-point-up"></i>
           </a>
         </article>
-        <article class="portfolio__item item3">
-          <h3 class="portfolio__title">Valvoline</h3>
-          <p class="portfolio__description">
+        <article class="portfolio-item item3">
+          <h3 class="portfolio-title">Valvoline</h3>
+          <p class="portfolio-description">
             HTML/CSS/JavaScript
           </p>
-          <a href="http://valvoline.com.ar/" class="portfolio__link" target="_blank">
+          <a href="http://valvoline.com.ar/" class="portfolio-link" target="_blank">
             <i class="icon-point-up"></i>
           </a>
         </article>
-        <article class="portfolio__item item4">
-          <h3 class="portfolio__title">Sidesys IT</h3>
-          <p class="portfolio__description">
+        <article class="portfolio-item item4">
+          <h3 class="portfolio-title">Sidesys IT</h3>
+          <p class="portfolio-description">
             HTML/CSS/JavaScript
           </p>
-          <a href="http://www.sidesys.com/" class="portfolio__link" target="_blank">
+          <a href="http://www.sidesys.com/" class="portfolio-link" target="_blank">
             <i class="icon-point-up"></i>
           </a>
         </article>
@@ -122,14 +125,14 @@
 
   <footer class="footer">
     <div class="wrapperWide">
-      <div class="footer__top">
+      <div class="footer-top">
         <img src="img/logo-white.svg" alt="Giancarlo Vera">
         <a href="#top" id="goTop"><i class="icon-circle-up"></i></a>
       </div>
-      <div class="footer__legal">
+      <div class="footer-legal">
         <p>&copy; 2017 Giancarlo Vera</p>
       </div>
-      <div class="footer__social">
+      <div class="footer-social">
           <a href="https://github.com/gianverab" target="_blank" title="Fork me!">
             <i class="icon-github"></i>
           </a>
