@@ -1,7 +1,6 @@
 .footer {
   background-color: var(--color-dark);
   color: #fff;
-  margin-top: 52px;
   padding: 0.5em 0.5em 1.5em;
   @media (--ipad) {
     padding: 1em;

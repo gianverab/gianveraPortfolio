@@ -1,9 +1,4 @@
 .largeHero {
-  padding-top: 52px;
-  @media (--ipad) {
-    padding-top: 60px;
-  }
-  &-container {
     background: url(../img/hero_bg.jpg) no-repeat;
     background-size: cover;
     height: calc(100vh - 52px);
@@ -16,7 +11,6 @@
     @media (--ipadPro) {
       height: calc(94vh - 60px);
     }
-  }
   &-avatar {
     flex: 1;
     display: flex;

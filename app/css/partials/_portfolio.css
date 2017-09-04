@@ -1,17 +1,28 @@
 .portfolio {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(8, 1fr);
-  grid-gap: 1em;
-  height: 1000px;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "project1"
+    "project2"
+    "project3"
+    "project4";
+  grid-gap: 0.5em;
+  height: 800px;
   @media (--ipad) {
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "project1 project2"
+      "project3 project4";
     height: 600px;
   }
-  @media (--phoneL) {
+  @media (--ipadPro) {
     grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-template-areas:
+      "project1 project1 project1 project2 project2"
+      "project3 project3 project4 project4 project4";
   }
   &-item {
     display: flex;
@@ -69,63 +80,27 @@
     }
   }
   .item1 {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-area: project1;
     background: url(../img/project_tiendalatam.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    @media (--ipad) {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-    @media (--phoneL) {
-      grid-column: span 3;
-      grid-row: span 2;
-    }
   }
   .item2 {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-area: project2;
     background: url(../img/project_imcg.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    @media (--ipad) {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-    @media (--phoneL) {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
   }
   .item3 {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-area: project3;
     background: url(../img/project_valvoline.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    @media (--ipad) {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-    @media (--phoneL) {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
   }
   .item4 {
-    grid-column: span 2;
-    grid-row: span 2;
+    grid-area: project4;
     background: url(../img/project_sidesys.jpg) no-repeat;
     background-size: cover;
     background-position: center;
-    @media (--ipad) {
-      grid-column: span 2;
-      grid-row: span 2;
-    }
-    @media (--phoneL) {
-      grid-column: span 3;
-      grid-row: span 2;
-    }
   }
 }

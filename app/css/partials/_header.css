@@ -1,5 +1,4 @@
 .mainHeader {
-  position: fixed;
   width: 100%;
   background-color: var(--color-dark);
   z-index: 20;

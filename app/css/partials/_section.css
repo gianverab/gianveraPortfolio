@@ -1,7 +1,7 @@
 .section {
   padding-top: 52px;
-  @media (--ipad) {
-    padding-top: 60px;
+  &#work {
+    padding-bottom: 52px;
   }
   &-title {
     text-align: center;
