@@ -1,5 +1,13 @@
 .section {
+  padding: 0 1.5em;
   padding-top: 52px;
+  @media (--baselayout) {
+    @supports (grid-area: auto) {
+      display: grid;
+      grid-template-columns: minmax(auto, 960px);
+      justify-content: center;
+    }
+  }
   &#work {
     padding-bottom: 52px;
   }

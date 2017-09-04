@@ -8,6 +8,7 @@
 /* Custom Media queries */
 @custom-media --phoneM screen and (min-width: 600px);
 @custom-media --ipad screen and (min-width: 768px);
+@custom-media --baselayout screen and (min-width: 960px);
 @custom-media --ipadPro screen and (min-width: 1024px);
 @custom-media --phoneL screen and (min-width: 1080px);
 @custom-media --desktop screen and (min-width: 1200px);
@@ -20,8 +21,8 @@ body {
   font-size: 16px;
   font-weight: 300;
   color: var(--color-dark);
-  padding-top: 76px;
-  margin-top: -76px;
+  //padding-top: 76px;
+  //margin-top: -76px;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -35,8 +36,8 @@ ul {
   list-style: none;
 }
 .wrapper {
-  max-width: 960px;
-  margin: 0 auto;
+  //max-width: 960px;
+  //margin: 0 auto;
   padding: 0 1.5em;
 }
 .wrapperWide {
@@ -44,34 +45,14 @@ ul {
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
-  max-width: 1200px;
-  margin: 0 auto;
+  //max-width: 1200px;
+  //margin: 0 auto;
   padding: 0 0.5em;
 }
-
-/* CSS Grid layout for modern browsers */
-@supports (grid-area: auto) {
-  @media (--ipad) {
-    .site {
-      display: grid;
-      grid-template-columns: auto;
-      grid-template-rows: auto;
-      grid-template-areas: "navigation" "hero" "about" "portfolio" "footer";
-    }
-    .mainHeader {
-      grid-area: navigation;
-    }
-    .largeHero {
-      grid-area: hero;
-    }
-    .footer {
-      grid-area: footer;
-    }
-    .section#about {
-      grid-area: about;
-    }
-    .section#work {
-      grid-area: portfolio;
-    }
+.site {
+  max-width: 960px;
+  margin: 0 auto;
+  @media (--baselayout) {
+    max-width: none;
   }
 }

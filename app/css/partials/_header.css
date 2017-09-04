@@ -1,7 +1,20 @@
 .mainHeader {
-  width: 100%;
   background-color: var(--color-dark);
-  z-index: 20;
+  padding: 0 .5em;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  @media (--baselayout) {
+    @supports (grid-area: auto) {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(auto, 600px));
+      align-items: center;
+      justify-content: center;
+      nav {
+        justify-self: end;
+      }
+    }
+  }
   @media (--ipad) {
     padding: 0 1em;
   }

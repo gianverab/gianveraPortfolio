@@ -8,9 +8,6 @@
     @media (--ipad) {
       height: calc(100vh - 60px);
     }
-    @media (--ipadPro) {
-      height: calc(94vh - 60px);
-    }
   &-avatar {
     flex: 1;
     display: flex;

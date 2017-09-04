@@ -36,10 +36,10 @@ gulp.task('styles', function () {
     csswring()
   ]
   return gulp.src(cssSrc)
-    //.pipe(sourcemaps.init())
+    .pipe(sourcemaps.init())
     .pipe(postcss(plugins))
     .pipe(rename('app.min.css'))
-    //.pipe(sourcemaps.write('./'))
+    .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(cssDest))
     .pipe(browsersync.stream())
 })
