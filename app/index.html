@@ -22,20 +22,25 @@
     <![endif]-->
 </head>
 <body class="site">
-  <header class="mainHeader"  id="top">
-      <div>
-        <h1 class="mainHeader-logo">
-          <a href="index.html">Giancarlo Vera</a>
+  <header class="header"  id="top">
+        <h1 class="header-logo">
+          <a href="index.html">
+            <img src="img/logo-dark.svg" alt="Giancarlo Vera's logo">
+            &lt;/Giancarlo Vera&gt;
+          </a>
         </h1>
-      </div>
-      <nav>
-        <ul class="mainHeader-menu">
-          <li class="mainHeader-menuItem active"><a href="#top"><span>Home</span> <i class="icon-home"></i></a></li>
-          <li class="mainHeader-menuItem"><a href="#about"><span>About</span> <i class="icon-user"></i></a></li>
-          <li class="mainHeader-menuItem"><a href="#work"><span>Work</span> <i class="icon-folio"></i></a></li>
-        </ul>
-      </nav>
   </header>
+
+  <section class="mainNav">
+		<button class="trigger" aria-expanded="false">Menu<span class="screen-reader-text">Reveal menu</span></button>
+		<nav>
+			<ul class="mainNav-menu">
+        <li class="mainNav-menuItem active"><a href="#top"><span>Home</span> <i class="icon-home"></i></a></li>
+        <li class="mainNav-menuItem"><a href="#about"><span>About</span> <i class="icon-user"></i></a></li>
+        <li class="mainNav-menuItem"><a href="#work"><span>Work</span> <i class="icon-folio"></i></a></li>
+			</ul>
+		</nav>
+	</section>
 
   <div class="largeHero">
     <div class="largeHero-avatar">
@@ -52,7 +57,7 @@
     </div>
   </div>
 
-  <section id="about" class="section">
+  <section id="about" class="section about">
     <h2 class="section-title">Who I Am</h2>
     <div class="section-icon"><i class="icon-info"></i></div>
     <p class="section-paragraph">I have a bachelor degree in Biology with mention in Zoology, from San Marcos National University in Peru.</p>
@@ -64,7 +69,7 @@
         <p class="section-paragraph">Father of a lovely and smart daughter of five years old, I spend part of my free time watching nature tv shows and cartoons with her.</p>
   </section>
 
-  <section id="work" class="section">
+  <section id="work" class="section work">
     <h2 class="section-title">What I done</h2>
     <div class="section-icon"><i class="icon-image"></i></div>
     <p class="section-paragraph">Here you will find some of the projects I worked on the last couple years. </p>

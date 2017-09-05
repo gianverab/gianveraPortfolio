@@ -9,9 +9,39 @@
 @custom-media --phoneM screen and (min-width: 600px);
 @custom-media --ipad screen and (min-width: 768px);
 @custom-media --baselayout screen and (min-width: 960px);
+@custom-media --mobilelayout screen and (max-width: 720px);
 @custom-media --ipadPro screen and (min-width: 1024px);
 @custom-media --phoneL screen and (min-width: 1080px);
 @custom-media --desktop screen and (min-width: 1200px);
+
+/* Text meant only for screen readers */
+.screen-reader-text {
+	clip: rect(1px, 1px, 1px, 1px);
+	position: absolute !important;
+	height: 1px;
+	width: 1px;
+	overflow: hidden;
+}
+.screen-reader-text:hover,
+.screen-reader-text:active,
+.screen-reader-text:focus {
+	background-color: #f1f1f1;
+	border-radius: 3px;
+	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
+	clip: auto !important;
+	color: #21759b;
+	display: block;
+	font-size: 14px;
+	font-weight: bold;
+	height: auto;
+	left: 5px;
+	line-height: normal;
+	padding: 15px 23px 14px;
+	text-decoration: none;
+	top: 5px;
+	width: auto;
+	z-index: 100000; /* Above WP toolbar */
+}
 
 * {
   box-sizing: border-box;
@@ -21,8 +51,6 @@ body {
   font-size: 16px;
   font-weight: 300;
   color: var(--color-dark);
-  //padding-top: 76px;
-  //margin-top: -76px;
 }
 h1, h2, h3, h4, h5, h6 {
   font-family: 'Montserrat', sans-serif;
@@ -35,24 +63,7 @@ img {
 ul {
   list-style: none;
 }
-.wrapper {
-  //max-width: 960px;
-  //margin: 0 auto;
-  padding: 0 1.5em;
-}
-.wrapperWide {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  //max-width: 1200px;
-  //margin: 0 auto;
-  padding: 0 0.5em;
-}
 .site {
   max-width: 960px;
   margin: 0 auto;
-  @media (--baselayout) {
-    max-width: none;
-  }
 }

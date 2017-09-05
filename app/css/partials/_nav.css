@@ -1,0 +1,67 @@
+.mainNav {
+	padding: 1em;
+	color: var(--color-grey);
+  background-color: var(--color-dark);
+  &-menu {
+  	display: flex;
+  	justify-content: center;
+  	flex-wrap: wrap;
+  	margin: 0;
+  	padding: 0;
+  }
+  &-menuItem {
+    padding: 0 0.5em;
+    &.active a {
+      color: var(--color-light);
+      border-bottom: 2px solid var(--color-light);
+      &:hover {
+        color: var(--color-light);
+      }
+    }
+    a {
+      display: flex;
+      align-items: baseline;
+      font-size: 1.4em;
+      text-decoration: none;
+      letter-spacing: 1px;
+      padding: 4px 0.2em;
+      color: var(--color-grey);
+      border-bottom: 2px solid transparent;
+      transition: color 0.5s ease-in-out;
+      @media (--ipad) {
+        font-size: 1.6em;
+      }
+      &:hover {
+        color: #fff;
+      }
+      > * {
+        padding: 0 0.2em;
+      }
+    }
+    span {
+        display: inline-block;
+        font-size: .8em;
+        font-weight: 300;
+        text-transform: uppercase;
+        @media (--ipad) {
+          font-size: .6em;
+        }
+    }
+  }
+}
+
+.trigger {
+	display: none;
+	padding: .2em .5em;
+	color: white;
+	background: hsl(0, 0%, 10%);
+	border: none;
+	transform: rotate(90deg);
+  &:focus,
+  &:hover {
+  	outline: 2px dotted hsl(0, 0%, 10%);
+  }
+  &:focus {
+  	outline-color: white;
+  }
+}

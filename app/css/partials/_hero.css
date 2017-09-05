@@ -1,63 +1,59 @@
 .largeHero {
     background: url(../img/hero_bg.jpg) no-repeat;
     background-size: cover;
-    height: calc(100vh - 52px);
+    height: calc(100vh - 185px);
     display: flex;
     flex-flow: column nowrap;
     text-shadow: 1px 1px 1px rgba(17, 17, 17, 0.36);
-    @media (--ipad) {
-      height: calc(100vh - 60px);
+    @media (--mobilelayout) {
+      height: calc(100vh - 133px);
     }
-  &-avatar {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-bottom: 24px;
-    img {
-      width: 150px;
-      height: 150px;
-      border-radius: 50%;
-      border: 6px solid #fff;
-      box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.36), -4px -4px 10px 0px rgba(50, 50, 50, 0.36);
-      @media (--phoneM) {
-        width: 200px;
-        height: 200px;
-      }
-      @media (--ipadPro) {
-        width: 220px;
-        height: 220px;
+    &-avatar {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      margin-bottom: 24px;
+      img {
+        width: 150px;
+        height: 150px;
+        border-radius: 50%;
+        border: 6px solid #fff;
+        box-shadow: 4px 4px 10px 0px rgba(50, 50, 50, 0.36), -4px -4px 10px 0px rgba(50, 50, 50, 0.36);
+        @media (--ipad) {
+          width: 180px;
+          height: 180px;
+        }
       }
     }
-  }
-  &-text {
-    flex: 1;
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: flex-start;
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 1.5em;
-  }
-  &-title {
-    margin: 0;
-    font-size: responsive 24px 38px;
-    font-range: 320px 1024px;
-    font-weight: 500;
-  }
-  &-subtitle {
-    font-family: 'Quattrocento', serif;
-    margin: 0.5em 0;
-    font-size: responsive 20px 28px;
-    font-range: 320px 1024px;
-    line-height: 1.3;
-    font-weight: 400;
-  }
-  &-arrow {
-    color: var(--color-dark);
-    font-size: 1.8em;
-    text-align: center;
-    display: block;
-    text-decoration: none;
-  }
+    &-text {
+      flex: 1;
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      max-width: 960px;
+      margin: 0 auto;
+      padding: 0 1.5em;
+    }
+    &-title {
+      margin: 0;
+      font-size: responsive 24px 38px;
+      font-range: 320px 1024px;
+      font-weight: 500;
+    }
+    &-subtitle {
+      font-family: 'Quattrocento', serif;
+      margin: 0.5em 0;
+      font-size: responsive 20px 28px;
+      font-range: 320px 1024px;
+      line-height: 1.3;
+      font-weight: 400;
+    }
+    &-arrow {
+      color: var(--color-dark);
+      font-size: 1.8em;
+      text-align: center;
+      display: block;
+      text-decoration: none;
+    }
 }

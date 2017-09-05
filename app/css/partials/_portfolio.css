@@ -31,7 +31,7 @@
     flex-flow: column wrap;
     color: #fff;
     position: relative;
-    z-index: 10;
+    z-index: 2;
     &::before {
       content: '';
       display: block;

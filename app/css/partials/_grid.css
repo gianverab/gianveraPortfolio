@@ -1,0 +1,66 @@
+@supports (grid-area: auto) {
+  @media (--baselayout) {
+    .site {
+      max-width: none;
+      display: grid;
+      grid-template-areas: "header" "navigation" "hero" "about" "portfolio" "footer";
+    }
+    .header {
+      grid-area: header;
+    }
+    .mainNav {
+      grid-area: navigation;
+    }
+    .largeHero {
+      grid-area: hero;
+    }
+    .about {
+      grid-area: about;
+    }
+    .work {
+      grid-area: portfolio;
+    }
+    .footer {
+      grid-area: footer;
+    }
+  }
+  @media (--mobilelayout) {
+    .site {
+      max-width: none;
+      display: grid;
+      grid-template-areas: "header" "hero" "about" "portfolio" "footer";
+    }
+    .header {
+      grid-area: header;
+    }
+    .largeHero {
+      grid-area: hero;
+    }
+    .about {
+      grid-area: about;
+    }
+    .work {
+      grid-area: portfolio;
+    }
+    .footer {
+      grid-area: footer;
+    }
+    .mainNav {
+      position: relative;
+      width: 12em;
+      grid-column: 1;
+      grid-row: 1/6;
+      z-index: 10;
+      left: -11.4em;
+      &-menu {
+        flex-direction: column;
+      }
+      .trigger {
+        position: fixed;
+        display: block;
+        top: 1.5em;
+        left: -0.4em;
+      }
+    }
+  }
+}
