@@ -37,6 +37,7 @@
     "postcss-cssnext": "^2.6.0",
     "postcss-import": "^8.1.2",
     "postcss-nested": "^1.0.0",
+    "pump": "^1.0.2",
     "rucksack-css": "^1.0.2"
   },
   "dependencies": {

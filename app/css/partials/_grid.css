@@ -52,7 +52,10 @@
       grid-row: 1/6;
       z-index: 10;
       left: -11.4em;
+      transition: left ease-in-out .6s;
       &-menu {
+        position: fixed;
+        display: none;
         flex-direction: column;
       }
       .trigger {
@@ -60,10 +63,14 @@
         display: block;
         top: 1.5em;
         left: -0.4em;
+        transition: left ease-in-out .6s;
       }
     }
     .reveal .mainNav {
       left: 0;
+    }
+    .open .mainNav-menu {
+      display: flex;
     }
     .reveal .trigger {
       left: 11em;

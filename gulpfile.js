@@ -6,7 +6,8 @@ var cssnext = require('postcss-cssnext')
 var cssnested = require('postcss-nested')
 var importcss = require('postcss-import')
 var jsconcat = require('gulp-concat')
-var jsuglify = require('gulp-uglify')
+var uglify = require('gulp-uglify')
+var pump = require('pump')
 var newer = require('gulp-newer')
 var imagemin = require('gulp-imagemin')
 var rename = require('gulp-rename')
@@ -49,14 +50,18 @@ gulp.task('styles', function () {
 })
 
 // JS Workflow
-gulp.task('scripts', function () {
-  return gulp.src(jsSrc)
-    .pipe(sourcemaps.init())
-    .pipe(jsconcat('all.js'))
-    .pipe(jsuglify())
-    .pipe(rename('app.min.js'))
-    .pipe(sourcemaps.write('./'))
-    .pipe(gulp.dest(jsDest))
+gulp.task('scripts', function (cb) {
+  pump([
+    gulp.src(jsSrc),
+    sourcemaps.init(),
+    jsconcat('all.js'),
+    uglify(),
+    rename('app.min.js'),
+    sourcemaps.write('./'),
+    gulp.dest(jsDest)
+  ],
+    cb
+  )
 })
 
 // HTML Workflow
@@ -95,7 +100,6 @@ gulp.task('watch', function () {
   gulp.watch('./app/css/**/*.css', ['styles'])
   gulp.watch(htmlSrc, ['html'])
   gulp.watch(fontSrc, ['fonts'])
-  gulp.watch(jsSrc, ['scripts'])
   gulp.watch(imgSrc, ['images'])
   gulp.watch(build + '*.html').on('change', browsersync.reload)
 })
