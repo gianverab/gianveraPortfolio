@@ -5,6 +5,8 @@ var rucksack = require('rucksack-css')
 var cssnext = require('postcss-cssnext')
 var cssnested = require('postcss-nested')
 var importcss = require('postcss-import')
+var jsconcat = require('gulp-concat')
+var jsuglify = require('gulp-uglify')
 var newer = require('gulp-newer')
 var imagemin = require('gulp-imagemin')
 var rename = require('gulp-rename')
@@ -16,6 +18,8 @@ var browsersync = require('browser-sync').create()
 // Include Paths
 var cssSrc = './app/css/*.css'
 var cssDest = './build/css/'
+var jsSrc = './app/js/*.js'
+var jsDest = './build/js/'
 var imgSrc = './app/img/*'
 var imgDest = './build/img/'
 var htmlSrc = './app/*.html'
@@ -44,6 +48,17 @@ gulp.task('styles', function () {
     .pipe(browsersync.stream())
 })
 
+// JS Workflow
+gulp.task('scripts', function () {
+  return gulp.src(jsSrc)
+    .pipe(sourcemaps.init())
+    .pipe(jsconcat('all.js'))
+    .pipe(jsuglify())
+    .pipe(rename('app.min.js'))
+    .pipe(sourcemaps.write('./'))
+    .pipe(gulp.dest(jsDest))
+})
+
 // HTML Workflow
 gulp.task('html', function () {
   return gulp.src(htmlSrc)
@@ -67,7 +82,7 @@ gulp.task('images', function () {
 })
 
 // Server set up and reload
-gulp.task('serve', ['styles', 'html', 'fonts', 'images'], function () {
+gulp.task('serve', ['html', 'styles', 'fonts', 'scripts', 'images'], function () {
   browsersync.init({
     server: {
       baseDir: './build'
@@ -80,6 +95,7 @@ gulp.task('watch', function () {
   gulp.watch('./app/css/**/*.css', ['styles'])
   gulp.watch(htmlSrc, ['html'])
   gulp.watch(fontSrc, ['fonts'])
+  gulp.watch(jsSrc, ['scripts'])
   gulp.watch(imgSrc, ['images'])
   gulp.watch(build + '*.html').on('change', browsersync.reload)
 })

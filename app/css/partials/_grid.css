@@ -62,5 +62,11 @@
         left: -0.4em;
       }
     }
+    .reveal .mainNav {
+      left: 0;
+    }
+    .reveal .trigger {
+      left: 11em;
+    }
   }
 }
