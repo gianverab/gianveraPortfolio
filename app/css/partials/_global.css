@@ -8,8 +8,8 @@
 /* Custom Media queries */
 @custom-media --phoneM screen and (min-width: 600px);
 @custom-media --ipad screen and (min-width: 768px);
-@custom-media --baselayout screen and (min-width: 960px);
-@custom-media --mobilelayout screen and (max-width: 720px);
+@custom-media --baselayout screen and (min-width: 801px);
+@custom-media --mobilelayout screen and (max-width: 800px);
 @custom-media --ipadPro screen and (min-width: 1024px);
 @custom-media --phoneL screen and (min-width: 1080px);
 @custom-media --desktop screen and (min-width: 1200px);

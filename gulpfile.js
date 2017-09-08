@@ -6,7 +6,7 @@ var cssnext = require('postcss-cssnext')
 var cssnested = require('postcss-nested')
 var importcss = require('postcss-import')
 var jsconcat = require('gulp-concat')
-var uglify = require('gulp-uglify')
+var uglify = require('gulp-uglify-es').default
 var pump = require('pump')
 var newer = require('gulp-newer')
 var imagemin = require('gulp-imagemin')
@@ -54,7 +54,7 @@ gulp.task('scripts', function (cb) {
   pump([
     gulp.src(jsSrc),
     sourcemaps.init(),
-    jsconcat('all.js'),
+    // jsconcat('all.js'),
     uglify(),
     rename('app.min.js'),
     sourcemaps.write('./'),

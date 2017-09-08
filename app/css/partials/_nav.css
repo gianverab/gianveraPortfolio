@@ -2,6 +2,14 @@
 	padding: 1em;
 	color: var(--color-grey);
   background-color: var(--color-dark);
+  &-logo {
+		display: none;
+		text-decoration: none;
+		img {
+			max-width: 36px;
+			height: 36px;
+		}
+  }
   &-menu {
   	display: flex;
   	justify-content: center;
@@ -48,6 +56,14 @@
         }
     }
   }
+}
+.mainNav.pinned {
+	display: flex;
+	justify-content: space-between;
+	padding: 0.5em 1em;
+}
+.pinned .mainNav-logo {
+	display: block;
 }
 
 .trigger {
