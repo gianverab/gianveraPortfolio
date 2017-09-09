@@ -22,13 +22,40 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #fff;
-    background-color: var(--color-base);
-    width: 64px;
-    height: 64px;
+    color: var(--color-dark);
+    width: 100%;
     margin: 0 auto;
     font-size: 2.2em;
-    border-radius: 50%;
+    position: relative;
+    &::before {
+      content: '';
+      display: block;
+      background-color: var(--color-dark);
+      position: absolute;
+      top: 50%;
+      right: calc(50% + 60px);
+      height: 2px;
+      width: 25%;
+    }
+    &::after {
+      content: '';
+      display: block;
+      background-color: var(--color-dark);
+      position: absolute;
+      top: 50%;
+      left: calc(50% + 60px);
+      height: 2px;
+      width: 25%;
+    }
+    .fa {
+      border: 2px solid var(--color-dark);
+      border-radius: 50%;
+      width: 80px;
+      height: 80px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
   }
   &-paragraph {
     font-size: responsive 16px 18px;

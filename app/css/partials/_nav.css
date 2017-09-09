@@ -21,7 +21,7 @@
     padding: 0 0.5em;
     &.active a {
       color: var(--color-light);
-      border-bottom: 2px solid var(--color-light);
+      border-bottom: 1px solid var(--color-light);
       &:hover {
         color: var(--color-light);
       }
@@ -29,41 +29,26 @@
     a {
       display: flex;
       align-items: baseline;
-      font-size: 1.4em;
+      font-size: 1em;
       text-decoration: none;
       letter-spacing: 1px;
-      padding: 4px 0.2em;
+      padding: 4px 0.25em;
       color: var(--color-grey);
-      border-bottom: 2px solid transparent;
-      transition: color 0.5s ease-in-out;
-      @media (--ipad) {
-        font-size: 1.6em;
-      }
+      border-bottom: 1px solid transparent;
       &:hover {
         color: #fff;
       }
-      > * {
-        padding: 0 0.2em;
-      }
-    }
-    span {
-        display: inline-block;
-        font-size: .8em;
-        font-weight: 300;
-        text-transform: uppercase;
-        @media (--ipad) {
-          font-size: .6em;
-        }
     }
   }
 }
 .mainNav.pinned {
-	display: flex;
-	justify-content: space-between;
-	padding: 0.5em 1em;
+	padding: 0.6em 1em;
+	opacity: .96;
 }
 .pinned .mainNav-logo {
-	display: block;
+	display: flex;
+	position: absolute;
+	top: calc(50% - 18px)
 }
 
 .trigger {

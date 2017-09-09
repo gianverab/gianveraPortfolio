@@ -10,11 +10,13 @@
       grid-area: header;
     }
     .mainNav {
-      width: 100%;
+      opacity: 1;
+      transition: all ease-in-out .5s;
       grid-area: navigation;
     }
     .mainNav.pinned {
       position: fixed;
+      width: 100%;
       top: 0;
       z-index: 99;
     }
@@ -61,6 +63,9 @@
       z-index: 10;
       left: -11.4em;
       transition: left ease-in-out .6s;
+      &.open {
+        padding: 1em 0;
+      }
       &-menu {
         position: fixed;
         display: none;
@@ -71,7 +76,8 @@
         display: block;
         top: 1.5em;
         left: -0.4em;
-        transition: left ease-in-out .6s;
+        z-index: 100;
+        transition: left ease-in-out .5s;
       }
     }
     .reveal .mainNav {
@@ -79,6 +85,27 @@
     }
     .open .mainNav-menu {
       display: flex;
+      width: 12em;
+    }
+    .open .mainNav-menuItem {
+      padding: 0;
+      &.active a {
+        border-bottom: 1px solid var(--color-light);
+        background-color: var(--color-light);
+        color: var(--color-dark);
+        &:hover {
+          color: var(--color-dark);
+          background-color: var(--color-light);
+        }
+      }
+      a {
+        padding: .5em .8em;
+        border-bottom: 1px solid var(--color-grey);
+        &:hover {
+          color: var(--color-dark);
+          background-color: var(--color-grey);
+        }
+      }
     }
     .reveal .trigger {
       left: 11em;

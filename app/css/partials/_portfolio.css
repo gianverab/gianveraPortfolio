@@ -7,7 +7,7 @@
     "project2"
     "project3"
     "project4";
-  grid-gap: 0.5em;
+  grid-gap: 1em;
   height: 800px;
   @media (--ipad) {
     grid-template-columns: repeat(2, 1fr);
@@ -31,10 +31,12 @@
     flex-flow: column wrap;
     color: #fff;
     position: relative;
+    border-radius: .5em;
     z-index: 2;
     &::before {
       content: '';
       display: block;
+      border-radius: .5em;
       background-color: color(var(--color-base) alpha(-80%));
       position: absolute;
       top: 0;
