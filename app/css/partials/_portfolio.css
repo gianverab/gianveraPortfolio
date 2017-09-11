@@ -7,8 +7,11 @@
     "project2"
     "project3"
     "project4";
-  grid-gap: 1em;
+  grid-gap: .5em;
   height: 800px;
+  @media (--phoneM) {
+    height: 1000px;
+  }
   @media (--ipad) {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(2, 1fr);
@@ -18,11 +21,11 @@
     height: 600px;
   }
   @media (--ipadPro) {
-    grid-template-columns: repeat(5, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-columns: repeat(5, 1fr) !important;
+    grid-template-rows: repeat(2, 1fr) !important;
     grid-template-areas:
       "project1 project1 project1 project2 project2"
-      "project3 project3 project4 project4 project4";
+      "project3 project3 project4 project4 project4" !important;
   }
   &-item {
     display: flex;
@@ -31,12 +34,13 @@
     flex-flow: column wrap;
     color: #fff;
     position: relative;
-    border-radius: .5em;
+    border-radius: 2px;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
     z-index: 2;
     &::before {
       content: '';
       display: block;
-      border-radius: .5em;
+      border-radius: 2px;
       background-color: color(var(--color-base) alpha(-80%));
       position: absolute;
       top: 0;

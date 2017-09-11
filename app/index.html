@@ -24,12 +24,12 @@
 <body class="site">
   <a class="skip-link screen-reader-text" href="#about">Skip to content</a>
   <header class="header"  id="top">
-        <h1 class="header-logo">
-          <a href="index.html">
-            <img src="img/logo-dark.svg" alt="Giancarlo Vera's logo">
-            &lt;/GianVera&gt;
-          </a>
-        </h1>
+    <h1 class="header-logo">
+      <a href="index.html">
+        <img src="img/logo-dark.svg" alt="Giancarlo Vera's logo">
+        &lt;/GianVera&gt;
+      </a>
+    </h1>
   </header>
 
   <section class="mainNav">
@@ -42,6 +42,8 @@
         <li class="mainNav-menuItem active"><a href="#top">Home</a></li>
         <li class="mainNav-menuItem"><a href="#about">About</a></li>
         <li class="mainNav-menuItem"><a href="#work">Work</a></li>
+        <li class="mainNav-menuItem"><a href="#quotes">Testimonial</a></li>
+        <li class="mainNav-menuItem"><a href="#contact">Contact</a></li>
 			</ul>
 		</nav>
 	</section>
@@ -65,11 +67,10 @@
     <div class="section-icon"><i class="fa fa-id-badge" aria-hidden="true"></i></div>
     <p class="section-paragraph">I have a bachelor degree in Biology with mention in Zoology, from San Marcos National University in Peru.</p>
     <p class="section-paragraph">After a few years studying ecology of some species of birds, mainly parrots and raptors from the Coast and Amazon rainforest of Peru, I moved to Argentina where I found my other passion in life: <em>coding</em>.</p>
-    <p class="section-paragraph">I worked as a freelancer since the early years of web development, coding web templates for different clients with just HTML/CSS.
-      Over time I added JavaScript to my skill set, expanding my chances of being able to work on more complex projects.</p>
-      <p class="section-paragraph">Always in constant training, that is why I am increasing my skills in React, Node and GraphQl, technologies that will allow me to create robust applications that solve real people needs.<br>
-        One of my goals is to keep going in coding for good.</p>
-        <p class="section-paragraph">Father of a lovely and smart daughter of five years old, I spend part of my free time watching nature tv shows and cartoons with her.</p>
+    <p class="section-paragraph">I worked as a freelancer since the early years of web development, coding web templates for different clients with just HTML/CSS. Over time I added JavaScript to my skill set, expanding my chances of being able to work on more complex projects.</p>
+    <p class="section-paragraph">Always in constant training, that is why I am increasing my skills in React, Node and GraphQl, technologies that will allow me to create robust applications that solve real people needs.<br>
+    One of my goals is to keep going in coding for good.</p>
+    <p class="section-paragraph">Father of a lovely and smart daughter of five years old, I spend part of my free time watching nature tv shows and cartoons with her.</p>
   </section>
 
   <section id="work" class="section work">
@@ -83,7 +84,7 @@
           HTML/CSS/JavaScript
         </p>
         <a href="http://www.tiendalatam.com/" class="portfolio-link" target="_blank">
-          <i class="icon-point-up"></i>
+          <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         </a>
       </article>
       <article class="portfolio-item item2">
@@ -92,7 +93,7 @@
           HTML/CSS/JavaScript
         </p>
         <a href="http://www.imcgconsulting.com/" class="portfolio-link" target="_blank">
-          <i class="icon-point-up"></i>
+          <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         </a>
       </article>
       <article class="portfolio-item item3">
@@ -101,7 +102,7 @@
           HTML/CSS/JavaScript
         </p>
         <a href="http://valvoline.com.ar/" class="portfolio-link" target="_blank">
-          <i class="icon-point-up"></i>
+          <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         </a>
       </article>
       <article class="portfolio-item item4">
@@ -110,10 +111,61 @@
           HTML/CSS/JavaScript
         </p>
         <a href="http://www.sidesys.com/" class="portfolio-link" target="_blank">
-          <i class="icon-point-up"></i>
+          <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         </a>
       </article>
     </div>
+  </section>
+
+  <section id="quotes" class="section quotes">
+    <h2 class="section-title">What people say</h2>
+    <div class="section-icon"><i class="fa fa-quote-right" aria-hidden="true"></i></div>
+    <p class="section-paragraph">Along the way I worked with awesome people, some of them wrote lines about me. </p>
+    <div class="quotesGrid">
+      <blockquote class="quotesGrid-quote quote1">
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        <p class="quotesGrid-description">
+          Giancarlo is a great developer who manifests a strong passion for Web Development, his hunger for learning more and more concepts and programming tools make him a resource with enormous potential for any project.<br/>
+          <cite>
+            <a href="https://www.linkedin.com/in/gianvera/#ember5784">Source: LinkedIn</a> , Tom&aacute;s Waldbaum.
+          </cite>
+        </p>
+      </blockquote>
+      <blockquote class="quotesGrid-quote quote2">
+        <i class="fa fa-quote-left" aria-hidden="true"></i>
+        <p class="quotesGrid-description">
+          Giancarlo is an excellent Front-end developer, we shared several projects together and in each one of them he demonstrated a great commitment and professionalism.
+          <br/>
+          I recommend him for any type of project due to his great professional approach.<br/>
+          <cite>
+            <a href="https://www.linkedin.com/in/gianvera/#ember5784">Source: LinkedIn</a> , Andr&eacute;s Estevez.
+          </cite>
+        </p>
+      </blockquote>
+    </div>
+  </section>
+
+  <section id="contact" class="section contact">
+    <h2 class="section-title">Get in touch</h2>
+    <div class="section-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
+    <p class="section-paragraph">If you have any questions about my work, need some help with your project or just want to say hello, feel free to reach me and I will contact you as soon as posible.</p>
+    <form class="contactForm" id="contactForm" action="" method="">
+      <p class="contactForm-field nameField">
+        <label for="name">Name</label>
+        <input type="text" name="name" id="name" placeholder="Juan P&eacute;rez" required aria-required="true">
+      </p>
+      <p class="contactForm-field emailField">
+        <label for="email">Email</label>
+        <input type="text" name="email" id="email" placeholder="juanperez@mail.com" required aria-required="true">
+      </p>
+      <p class="contactForm-field commentsField">
+        <label for="comments">Comments</label>
+        <textarea name="comments" id="comments" placeholder="Say hello!"></textarea>
+      </p>
+      <p class="contactForm-field submitField">
+        <input type="submit" name="" value="Send">
+      </p>
+    </form>
   </section>
 
   <footer class="footer">
@@ -127,13 +179,13 @@
           <a href="https://twitter.com/gianvera" target="_blank">
             <i class="fa fa-twitter" aria-hidden="true"></i>
           </a>
-          <a class="largeIcon" href="https://www.linkedin.com/in/gianvera/" target="_blank">
+          <a href="https://www.linkedin.com/in/gianvera/" target="_blank">
             <i class="fa fa-linkedin-square" aria-hidden="true"></i>
           </a>
-          <a class="largeIcon" href="https://www.instagram.com/gianverab/" target="_blank">
+          <a href="https://www.instagram.com/gianverab/" target="_blank">
             <i class="fa fa-instagram" aria-hidden="true"></i>
           </a>
-          <a class="largeIcon" href="https://www.facebook.com/GianveraCoder/" target="_blank">
+          <a href="https://www.facebook.com/GianveraCoder/" target="_blank">
             <i class="fa fa-facebook-square" aria-hidden="true"></i>
           </a>
       </div>

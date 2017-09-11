@@ -4,7 +4,8 @@
     .site {
       max-width: none;
       display: grid;
-      grid-template-areas: "header" "navigation" "hero" "about" "portfolio" "footer";
+      grid-template-areas:
+      "header" "navigation" "hero" "about" "portfolio" "quotes" "contact" "footer";
     }
     .header {
       grid-area: header;
@@ -29,6 +30,12 @@
     .work {
       grid-area: portfolio;
     }
+    .quotes {
+      grid-area: quotes;
+    }
+    .contact {
+      grid-area: contact;
+    }
     .footer {
       grid-area: footer;
     }
@@ -38,7 +45,7 @@
     .site {
       max-width: none;
       display: grid;
-      grid-template-areas: "header" "hero" "about" "portfolio" "footer";
+      grid-template-areas: "header" "hero" "about" "portfolio" "quotes" "contact" "footer";
     }
     .header {
       grid-area: header;
@@ -52,6 +59,12 @@
     .work {
       grid-area: portfolio;
     }
+    .quotes {
+      grid-area: quotes;
+    }
+    .contact {
+      grid-area: contact;
+    }
     .footer {
       grid-area: footer;
     }
@@ -59,13 +72,10 @@
       position: relative;
       width: 12em;
       grid-column: 1;
-      grid-row: 1/6;
+      grid-row: 1 / span 6;
       z-index: 10;
       left: -11.4em;
       transition: left ease-in-out .6s;
-      &.open {
-        padding: 1em 0;
-      }
       &-menu {
         position: fixed;
         display: none;
@@ -82,6 +92,10 @@
     }
     .reveal .mainNav {
       left: 0;
+    }
+    .mainNav.open,
+    .mainNav.pinned.open {
+      padding: 1em 0;
     }
     .open .mainNav-menu {
       display: flex;

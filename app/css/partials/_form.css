@@ -1,0 +1,46 @@
+.contactForm {
+  display: grid;
+  grid-template-areas: "name" "email" "comments" "submit";
+  &-field {
+    display: grid;
+    margin: 0;
+    padding: .5em 0;
+    label {
+      padding-bottom: .5em;
+    }
+    input, textarea {
+      font-size: .9em;
+      padding: .5em;
+      width: 100%;
+      border-radius: 2px;
+      border: 0;
+      box-shadow: 0 0 3px rgba(0,0,0,0.5);
+    }
+    input[type="submit"] {
+      background-color: var(--color-base);
+      color: #ffffff;
+      text-transform: uppercase;
+      padding: 1em;
+      cursor: pointer;
+      transition: color ease-in-out .5s;
+      &:hover {
+        background-color: color(var(--color-base) blackness(15%));
+      }
+    }
+    textarea {
+      min-height: 6em;
+    }
+    &.nameField {
+      grid-area: name;
+    }
+    &.emailField {
+      grid-area: email;
+    }
+    &.commentsField {
+      grid-area: comments;
+    }
+    &.submitField {
+      grid-area: submit;
+    }
+  }
+}

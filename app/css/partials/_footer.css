@@ -38,7 +38,8 @@
       flex: inherit;
     }
     a {
-     font-size: 1.6em;
+      color: var(--color-grey);
+     font-size: 1.5em;
      margin: 0 0.25em;
      transition: all 0.5s ease-in-out;
        &:last-child {
@@ -46,9 +47,6 @@
        }
        &:hover {
          color: var(--color-light);
-       }
-       &.largeIcon {
-         font-size: 1.5em;
        }
     }
 

@@ -3,7 +3,7 @@
   --color-base: #1a62f6;
   --color-dark: #1f1f21;
   --color-light: #f7b733;
-  --color-grey: #c4c8d0;
+  --color-grey: #dddddd;
 }
 /* Custom Media queries */
 @custom-media --phoneM screen and (min-width: 600px);
@@ -62,6 +62,16 @@ img {
 }
 ul {
   list-style: none;
+}
+blockquote, cite {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+}
+button, input, select, textarea {
+  font-family: inherit;
+  font-size: 100%;
 }
 .site {
   max-width: 960px;

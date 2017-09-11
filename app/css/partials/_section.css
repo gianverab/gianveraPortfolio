@@ -8,9 +8,6 @@
       justify-content: center;
     }
   }
-  &#work {
-    padding-bottom: 52px;
-  }
   &-title {
     text-align: center;
     font-size: responsive 22px 32px;
@@ -61,5 +58,14 @@
     font-size: responsive 16px 18px;
     font-range: 320px 1024px;
     line-height: 1.6;
+  }
+  &.work {
+    padding-bottom: 1.5em;
+  }
+  &.quotes {
+    padding-bottom: 1.5em;
+  }
+  &.contact {
+    padding-bottom: 5em;
   }
 }

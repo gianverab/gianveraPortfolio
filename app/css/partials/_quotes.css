@@ -1,0 +1,55 @@
+.quotesGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2, 1fr);
+  grid-template-areas:
+    "quote1"
+    "quote2";
+  grid-gap: 1em;
+  height: 100%;
+  @media (--ipad) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-template-areas:
+      "quote1 quote2";
+  }
+  &-quote {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column wrap;
+    position: relative;
+    border-radius: 2px;
+    border-left: 0.5em solid var(--color-grey);
+    padding: 1.5em .75em;
+    background: #fff;
+    box-shadow: 0 0 6px rgba(0,0,0,0.5);
+  }
+  &-description {
+    font-size: responsive 16px 18px;
+    font-range: 320px 1024px;
+    line-height: 1.6;
+    margin: .5em 0;
+    cite {
+      font-size: responsive 14px 16px;
+      font-range: 320px 1024px;
+      padding-top: .5em;
+      display: flex;
+      justify-content: flex-end;
+      a {
+        color: var(--color-base);
+        text-decoration: none;
+      }
+    }
+  }
+  .fa {
+    font-size: 1.2em;
+    color: color(var(--color-dark) alpha(-40%));
+  }
+  .quote1 {
+    grid-area: quote1;
+  }
+  .quote2 {
+    grid-area: quote2;
+  }
+}
