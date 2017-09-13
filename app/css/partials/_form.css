@@ -1,31 +1,47 @@
 .contactForm {
   display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, auto);
   grid-template-areas: "name" "email" "comments" "submit";
+  grid-gap: 1em;
+  @media (--phoneM) {
+    padding: 0 1em;
+  }
+  @media (--ipad) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, auto);
+    grid-template-areas:
+      "name comments"
+      "email comments"
+      "submit comments";
+  }
   &-field {
     display: grid;
     margin: 0;
-    padding: .5em 0;
-    label {
-      padding-bottom: .5em;
-    }
     input, textarea {
       font-size: .9em;
-      padding: .5em;
+      padding: 1em;
       width: 100%;
       border-radius: 2px;
       border: 0;
       box-shadow: 0 0 3px rgba(0,0,0,0.5);
+      &:focus {
+        background-color: color(var(--color-base) alpha(-90%));
+      }
     }
     input[type="submit"] {
       background-color: var(--color-base);
       color: #ffffff;
       text-transform: uppercase;
-      padding: 1em;
       cursor: pointer;
       transition: color ease-in-out .5s;
       &:hover {
         background-color: color(var(--color-base) blackness(15%));
       }
+    }
+    input[type="text"]:valid,
+    input[type="email"]:valid {
+      background-color: color(#1af67b alpha(-90%));
     }
     textarea {
       min-height: 6em;

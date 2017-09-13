@@ -70,11 +70,17 @@
     transition: all ease-in-out 0.5s;
   }
   &-description {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     margin: 0.5em 0;
     text-shadow: 1px 1px 1px rgba(17, 17, 17, 0.36);
     opacity: 0.1;
     transform: scale(0.1);
     transition: all ease-in-out 0.5s;
+    .pleft {
+      padding-left: 3px;
+    }
   }
   &-link {
     color: #fff;

@@ -74,7 +74,7 @@
       grid-column: 1;
       grid-row: 1 / span 6;
       z-index: 10;
-      left: -11.4em;
+      left: -12em;
       transition: left ease-in-out .6s;
       &-menu {
         position: fixed;
@@ -85,7 +85,7 @@
         position: fixed;
         display: block;
         top: 1.5em;
-        left: -0.4em;
+        left: -1em;
         z-index: 100;
         transition: left ease-in-out .5s;
       }
