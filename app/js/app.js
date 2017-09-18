@@ -5,10 +5,24 @@
   const menuitems = nav.querySelectorAll('mainNav-menu a')
   const menuarray = Array.apply(null, menuitems)
   let screenReaderText = document.querySelector('.trigger .screen-reader-text')
+
+  // Contact form
+const form = document.getElementById('contactForm')
+const submit = document.getElementById('submit')
+const modal = document.getElementById('modal-one')
+
+form.addEventListener('submit', submitForm)
+
+function submitForm (e) {
+  e.preventDefault()
+  console.log('Gracias!')
+}
+
+
+  // Sticky nav
   let pinned = false
   let stickyScrollPoint = document.querySelector('.header').offsetHeight
 
-  // Sticky nav
   function pinToTop () {
     if (pinned) return
 

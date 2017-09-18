@@ -24,8 +24,6 @@ var jsDest = './build/js/'
 var imgSrc = './app/img/*'
 var imgDest = './build/img/'
 var htmlSrc = './app/*.html'
-var fontSrc = './app/fonts/*'
-var fontDest = './build/fonts/'
 var build = './build/'
 
 // CSS Workflow
@@ -58,7 +56,8 @@ gulp.task('scripts', function (cb) {
     uglify(),
     rename('app.min.js'),
     sourcemaps.write('./'),
-    gulp.dest(jsDest)
+    gulp.dest(jsDest),
+    (browsersync.stream())
   ],
     cb
   )
@@ -68,13 +67,6 @@ gulp.task('scripts', function (cb) {
 gulp.task('html', function () {
   return gulp.src(htmlSrc)
     .pipe(gulp.dest(build))
-})
-
-// Fonts
-gulp.task('fonts', function () {
-  return gulp.src(fontSrc)
-    .pipe(gulp.dest(fontDest))
-    .pipe(browsersync.stream())
 })
 
 // Minify any new images
@@ -87,10 +79,10 @@ gulp.task('images', function () {
 })
 
 // Server set up and reload
-gulp.task('serve', ['html', 'styles', 'fonts', 'scripts', 'images'], function () {
+gulp.task('serve', ['html', 'styles', 'scripts', 'images'], function () {
   browsersync.init({
     server: {
-      baseDir: './build'
+      baseDir: build
     }
   })
 })
@@ -98,8 +90,8 @@ gulp.task('serve', ['html', 'styles', 'fonts', 'scripts', 'images'], function ()
 // Watch for changes
 gulp.task('watch', function () {
   gulp.watch('./app/css/**/*.css', ['styles'])
+  gulp.watch('./app/js/**/*.js', ['scripts'])
   gulp.watch(htmlSrc, ['html'])
-  gulp.watch(fontSrc, ['fonts'])
   gulp.watch(imgSrc, ['images'])
   gulp.watch(build + '*.html').on('change', browsersync.reload)
 })
