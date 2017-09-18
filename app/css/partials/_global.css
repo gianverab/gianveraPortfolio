@@ -3,7 +3,8 @@
   --color-base: #1a62f6;
   --color-dark: #1f1f21;
   --color-light: #f7b733;
-  --color-grey: #dddddd;
+	--color-grey: #dddddd;
+	--color-success: #3ac162;
 }
 /* Custom Media queries */
 @custom-media --phoneM screen and (min-width: 600px);

@@ -4,8 +4,9 @@
   grid-template-rows: repeat(4, auto);
   grid-template-areas: "name" "email" "comments" "submit";
   grid-gap: 1em;
+  padding: 1em 0;
   @media (--phoneM) {
-    padding: 0 1em;
+    padding: 1em;
   }
   @media (--ipad) {
     grid-template-columns: repeat(2, 1fr);
@@ -22,7 +23,7 @@
       font-size: .9em;
       padding: 1em;
       width: 100%;
-      border-radius: 2px;
+      border-radius: 4px;
       border: 0;
       box-shadow: 0 0 3px rgba(0,0,0,0.5);
       &:focus {
@@ -38,10 +39,6 @@
       &:hover {
         background-color: color(var(--color-base) blackness(15%));
       }
-    }
-    input[type="text"]:valid,
-    input[type="email"]:valid {
-      background-color: color(#1af67b alpha(-90%));
     }
     textarea {
       min-height: 6em;

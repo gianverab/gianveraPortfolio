@@ -68,4 +68,16 @@
   &.contact {
     padding-bottom: 5em;
   }
+  .alert-success {
+    display: none;
+    background-color: var(--color-success);
+    padding: .5em 1em;
+    border-radius: 4px;
+    text-align: center;
+    color: #fff;
+    font-weight: 100;
+    @media (--phoneM) {
+      margin: 0 .8em;
+    }
+  }
 }

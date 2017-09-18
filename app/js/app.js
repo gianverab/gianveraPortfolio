@@ -6,18 +6,62 @@
   const menuarray = Array.apply(null, menuitems)
   let screenReaderText = document.querySelector('.trigger .screen-reader-text')
 
-  // Contact form
-const form = document.getElementById('contactForm')
-const submit = document.getElementById('submit')
-const modal = document.getElementById('modal-one')
+  // Initialize Firebase
+  const config = {
+    apiKey: "AIzaSyB3VC7v1d2vsWnxYbH09xGRFboAqrAEn14",
+    authDomain: "mycontactform-5858e.firebaseapp.com",
+    databaseURL: "https://mycontactform-5858e.firebaseio.com",
+    projectId: "mycontactform-5858e",
+    storageBucket: "",
+    messagingSenderId: "539074768803"
+  }
+  firebase.initializeApp(config)
 
-form.addEventListener('submit', submitForm)
+  // Reference messages collection
+  let messagesRef = firebase.database().ref('messages')
 
-function submitForm (e) {
-  e.preventDefault()
-  console.log('Gracias!')
-}
+  // Listening for form submit
+  const form = document.getElementById('contactForm')
+  const submit = document.getElementById('submit')
+  form.addEventListener('submit', submitForm)
 
+  // Submit form
+  function submitForm (e) {
+    e.preventDefault()
+
+    // Get values
+    let name = getInputVal('name')
+    let email = getInputVal('email')
+    let comments = getInputVal('comments')
+
+    // Save message
+    saveMessage(name, email, comments)
+
+    // Show alert
+    document.querySelector('.alert-success').style.display = 'block'
+
+    // Hide alert after 4 seconds
+    setTimeout(function () {
+      document.querySelector('.alert-success').style.display = 'none'
+    }, 4000)
+
+    // Reset form fields
+    document.getElementById('contactForm').reset()
+  }
+
+  function getInputVal (id) {
+    return document.getElementById(id).value
+  }
+
+  // Save messages to firebase
+  function saveMessage (name, email, comments) {
+    let newMessageRef = messagesRef.push()
+    newMessageRef.set({
+      name,
+      email,
+      comments
+    })
+  }
 
   // Sticky nav
   let pinned = false
