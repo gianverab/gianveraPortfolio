@@ -41,15 +41,11 @@
     }
   }
 }
-.mainNav.pinned {
-	opacity: .96;
-}
-.pinned .mainNav-logo {
+.fixed-nav .mainNav-logo {
 	display: flex;
 	position: absolute;
 	top: calc(50% - 18px)
 }
-
 .trigger {
 	display: none;
 	padding: .2em .5em;

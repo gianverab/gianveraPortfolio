@@ -15,10 +15,11 @@
       transition: all ease-in-out .5s;
       grid-area: navigation;
     }
-    .mainNav.pinned {
+    .fixed-nav .mainNav {
       position: fixed;
       width: 100%;
-      top: 0;
+      opacity: .96;
+      transition: all ease-in-out .5s;
       z-index: 99;
     }
     .largeHero {

@@ -1,9 +1,6 @@
 (function () {
   const site = document.querySelector('.site')
   const trigger = document.querySelector('.trigger')
-  const nav = document.querySelector('.mainNav')
-  const menuitems = nav.querySelectorAll('mainNav-menu a')
-  const menuarray = Array.apply(null, menuitems)
   let screenReaderText = document.querySelector('.trigger .screen-reader-text')
 
   // Initialize Firebase
@@ -64,30 +61,30 @@
   }
 
   // Sticky nav
-  let pinned = false
-  let stickyScrollPoint = document.querySelector('.header').offsetHeight
+  const nav = document.querySelector('.mainNav')
+  const menuitems = nav.querySelectorAll('mainNav-menu a')
+  const menuarray = Array.apply(null, menuitems)
+  const topOfNav = nav.offsetTop
+  const bigDevice = window.matchMedia( "(min-width: 801px)" );
 
-  function pinToTop () {
-    if (pinned) return
-
-    nav.classList.add('pinned')
-    pinned = true
+  function fixNav() {
+    if(window.scrollY >= topOfNav) {
+      if (bigDevice.matches) {
+        // window width is at least 801px
+        document.body.style.paddingTop = nav.offsetHeight + 'px'
+        document.body.classList.add('fixed-nav')
+      } else {
+        // window width is less than 801px
+        document.body.style.paddingTop = 0
+      }
+      
+    } else {
+      document.body.style.paddingTop = 0
+      document.body.classList.remove('fixed-nav')
+    }
   }
 
-  function unPinFromTop () {
-    if (!pinned) return
-
-    nav.classList.remove('pinned')
-    pinned = false
-  }
-
-  window.addEventListener('scroll', function (ev) {
-    if (window.scrollY < stickyScrollPoint) return unPinFromTop()
-    let coords = nav.getBoundingClientRect()
-    if (coords.top <= 0) return pinToTop()
-
-    unPinFromTop()
-  })
+  window.addEventListener('scroll', fixNav)
 
   // Toggle reveal class on body element, set aria-expanded and screen reader text on trigger:
   function revealMenu () {
