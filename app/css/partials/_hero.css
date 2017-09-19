@@ -1,7 +1,7 @@
 .largeHero {
     background: url(../img/hero_bg.jpg) no-repeat;
     background-size: cover;
-    padding: 0 1.5em;
+    padding: 1.5em;
     display: grid;
     /grid-template-columns: auto 960px auto;
     text-shadow: 1px 1px 1px rgba(17, 17, 17, 0.36);

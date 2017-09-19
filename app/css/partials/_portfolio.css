@@ -1,31 +1,34 @@
 .portfolio {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(5, 1fr);
   grid-template-areas:
     "project1"
     "project2"
     "project3"
-    "project4";
-  grid-gap: .5em;
-  height: 800px;
+    "project4"
+    "project5";
+  grid-gap: 1em;
+  height: 1000px;
   @media (--phoneM) {
     height: 1000px;
   }
   @media (--ipad) {
     grid-template-columns: repeat(2, 1fr);
-    grid-template-rows: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
     grid-template-areas:
       "project1 project2"
-      "project3 project4";
-    height: 600px;
+      "project3 project4"
+      "project5 project5";
+    height: 900px;
   }
   @media (--ipadPro) {
     grid-template-columns: repeat(5, 1fr) !important;
-    grid-template-rows: repeat(2, 1fr) !important;
+    grid-template-rows: repeat(3, 1fr) !important;
     grid-template-areas:
       "project1 project1 project1 project2 project2"
-      "project3 project3 project4 project4 project4" !important;
+      "project3 project3 project4 project4 project4" 
+      "project5 project5 project5 project5 project5" !important;
   }
   &-item {
     display: flex;
@@ -34,7 +37,7 @@
     flex-flow: column wrap;
     color: #fff;
     position: relative;
-    border-radius: 2px;
+    border-radius: 4px;
     box-shadow: 0 0 6px rgba(0,0,0,0.5);
     z-index: 2;
     &::before {
@@ -51,7 +54,7 @@
       transition: all ease-in-out 0.5s;
     }
     &:hover::before {
-      background-color: color(var(--color-base) alpha(-20%));
+      background-color: color(var(--color-base) alpha(-30%));
     }
     &:hover .portfolio-description {
       transform: scale(1);
@@ -99,18 +102,24 @@
   }
   .item2 {
     grid-area: project2;
-    background: url(../img/project_imcg.jpg) no-repeat;
+    background: url(../img/project_valvoline.jpg) no-repeat;
     background-size: cover;
     background-position: center;
   }
   .item3 {
     grid-area: project3;
-    background: url(../img/project_valvoline.jpg) no-repeat;
+    background: url(../img/project_gianvera.jpg) no-repeat;
     background-size: cover;
     background-position: center;
   }
   .item4 {
     grid-area: project4;
+    background: url(../img/project_imcg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .item5 {
+    grid-area: project5;
     background: url(../img/project_sidesys.jpg) no-repeat;
     background-size: cover;
     background-position: center;

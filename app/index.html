@@ -21,9 +21,10 @@
       <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
     <![endif]-->
 </head>
-<body class="site">
+<body class="site" id="top">
   <a class="skip-link screen-reader-text" href="#about">Skip to content</a>
-  <header class="header"  id="top">
+  <!-- HEADER -->
+  <header class="header">
     <h1 class="header-logo">
       <a href="index.html">
         <img src="img/logo-dark.svg" alt="Giancarlo Vera's logo">
@@ -32,6 +33,7 @@
     </h1>
   </header>
 
+  <!-- NAVIGATION -->
   <section class="mainNav">
     <a class="mainNav-logo" href="index.html">
       <img src="img/logo-grey.svg" alt="Giancarlo Vera's logo">
@@ -48,6 +50,7 @@
 		</nav>
 	</section>
 
+  <!-- HERO -->
   <div class="largeHero">
     <div class="largeHero-grid">
       <div class="largeHero-avatar">
@@ -62,6 +65,7 @@
     </div>
   </div>
 
+  <!-- ABOUT -->
   <section id="about" class="section about">
     <h2 class="section-title">Who I Am</h2>
     <div class="section-icon"><i class="fa fa-id-badge" aria-hidden="true"></i></div>
@@ -73,11 +77,13 @@
     <p class="section-paragraph">Father of a lovely and smart daughter of five years old, I spend part of my free time watching nature tv shows and cartoons with her.</p>
   </section>
 
+  <!-- PORTFOLIO -->
   <section id="work" class="section work">
     <h2 class="section-title">What I done</h2>
     <div class="section-icon"><i class="fa fa-briefcase" aria-hidden="true"></i></div>
     <p class="section-paragraph">Here you will find some of the projects I worked on the last couple years. </p>
     <div class="portfolio">
+      <!-- Project 1 -->
       <article class="portfolio-item item1">
         <h3 class="portfolio-title">Tienda Latam</h3>
         <p class="portfolio-description">
@@ -89,43 +95,63 @@
           <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         </a>
       </article>
+      <!-- Project 2 -->
       <article class="portfolio-item item2">
-        <h3 class="portfolio-title">IMCG Consulting</h3>
-        <p class="portfolio-description">
-          <img src="img/html.svg" alt="html">
-          <img class="pleft" src="img/css.svg" alt="css">
-          <img src="img/jquery.svg" alt="jquery">
-        </p>
-        <a href="http://www.imcgconsulting.com/" class="portfolio-link" target="_blank">
-          <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
-        </a>
+          <h3 class="portfolio-title">Valvoline</h3>
+          <p class="portfolio-description">
+            <img src="img/html.svg" alt="html">
+            <img class="pleft" src="img/css.svg" alt="css">
+            <img src="img/jquery.svg" alt="jquery">
+            <img src="img/ajax.svg" alt="ajax">
+          </p>
+          <a href="http://valvoline.com.ar/" class="portfolio-link" target="_blank">
+            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+          </a>
       </article>
+      <!-- Project 3 -->
       <article class="portfolio-item item3">
-        <h3 class="portfolio-title">Valvoline</h3>
-        <p class="portfolio-description">
-          <img src="img/html.svg" alt="html">
-          <img class="pleft" src="img/css.svg" alt="css">
-          <img src="img/jquery.svg" alt="jquery">
-          <img src="img/ajax.svg" alt="ajax">
-        </p>
-        <a href="http://valvoline.com.ar/" class="portfolio-link" target="_blank">
-          <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
-        </a>
-      </article>
-      <article class="portfolio-item item4">
-        <h3 class="portfolio-title">Sidesys IT</h3>
+        <h3 class="portfolio-title">Giancarlo Vera</h3>
         <p class="portfolio-description">
           <img src="img/html.svg" alt="html">
           <img class="pleft" src="img/css.svg" alt="css">
           <img class="pleft" src="img/javascript.svg" alt="javascript">
+          <img src="img/jquery.svg" alt="jquery">
+          <img src="img/gulp.svg" alt="gulp">
+          <img src="img/postcss.svg" alt="postcss">
+          <img src="img/firebase.svg" alt="firebase">
         </p>
-        <a href="http://www.sidesys.com/" class="portfolio-link" target="_blank">
+        <a href="/" class="portfolio-link" title="You are already here :)">
           <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
         </a>
       </article>
+      <!-- Project 4 -->
+      <article class="portfolio-item item4">
+          <h3 class="portfolio-title">IMCG Consulting</h3>
+          <p class="portfolio-description">
+            <img src="img/html.svg" alt="html">
+            <img class="pleft" src="img/css.svg" alt="css">
+            <img src="img/jquery.svg" alt="jquery">
+          </p>
+          <a href="http://www.imcgconsulting.com/" class="portfolio-link" target="_blank">
+            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+          </a>
+      </article>
+      <!-- Project 5 -->
+      <article class="portfolio-item item5">
+          <h3 class="portfolio-title">Sidesys IT</h3>
+          <p class="portfolio-description">
+            <img src="img/html.svg" alt="html">
+            <img class="pleft" src="img/css.svg" alt="css">
+            <img class="pleft" src="img/javascript.svg" alt="javascript">
+          </p>
+          <a href="http://www.sidesys.com/" class="portfolio-link" target="_blank">
+            <i class="fa fa-hand-pointer-o" aria-hidden="true"></i>
+          </a>
+        </article>
     </div>
   </section>
 
+  <!-- TESTIMONIAL -->
   <section id="quotes" class="section quotes">
     <h2 class="section-title">What people say</h2>
     <div class="section-icon"><i class="fa fa-quote-right" aria-hidden="true"></i></div>
@@ -154,6 +180,7 @@
     </div>
   </section>
 
+  <!-- CONTACT -->
   <section id="contact" class="section contact">
     <h2 class="section-title">Get in touch</h2>
     <div class="section-icon"><i class="fa fa-envelope-o" aria-hidden="true"></i></div>
@@ -175,6 +202,7 @@
     </form>
   </section>
 
+  <!-- FOOTER -->
   <footer class="footer">
       <div class="footer-legal">
         <p>&copy; 2017 Giancarlo Vera</p>
@@ -199,7 +227,29 @@
   </footer>
   <!-- FIREBASE -->
     <script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js"></script>
-	<!-- CUSTOM SCRIPTS -->
+  <!-- JQUERY -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <!-- CUSTOM SCRIPTS -->
     <script src="js/app.min.js"></script>
+    <script type="text/javascript">
+      /* ***************************
+        Enable Smooth Scrolling
+        Author: Chris Coyier
+        URL:  CSS-Tricks.com
+      ***************************** */
+
+        $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(function() {
+          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+            var target = $(this.hash);
+            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+            if (target.length) {
+              $('html,body').animate({
+                scrollTop: target.offset().top
+              }, 1000);
+              return false;
+            }
+          }
+        });
+    </script>
 </body>
 </html>

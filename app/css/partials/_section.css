@@ -1,6 +1,9 @@
 .section {
   padding: 0 1.5em;
   padding-top: 52px;
+  @media (--mobilelayout) {
+    padding-top: 1em;
+  }
   @media (--baselayout) {
     @supports (grid-area: auto) {
       display: grid;
