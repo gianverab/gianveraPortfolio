@@ -26,7 +26,7 @@
   <!-- HEADER -->
   <header class="header">
     <h1 class="header-logo">
-      <a href="index.html">
+      <a href="/">
         <img src="img/logo-dark.svg" alt="Giancarlo Vera's logo">
         &lt;/GianVera&gt;
       </a>
@@ -41,7 +41,7 @@
 		<button class="trigger" aria-expanded="false">Menu<span class="screen-reader-text">Reveal menu</span></button>
 		<nav>
 			<ul class="mainNav-menu">
-        <li class="mainNav-menuItem active"><a href="#top">Home</a></li>
+        <li class="mainNav-menuItem"><a class="active" href="#top">Home</a></li>
         <li class="mainNav-menuItem"><a href="#about">About</a></li>
         <li class="mainNav-menuItem"><a href="#work">Work</a></li>
         <li class="mainNav-menuItem"><a href="#quotes">Testimonial</a></li>
@@ -232,24 +232,54 @@
   <!-- CUSTOM SCRIPTS -->
     <script src="js/app.min.js"></script>
     <script type="text/javascript">
-      /* ***************************
-        Enable Smooth Scrolling
-        Author: Chris Coyier
-        URL:  CSS-Tricks.com
-      ***************************** */
-
-        $('a[href*="#"]:not([href="#"]):not([href="#show"]):not([href="#hide"])').click(function() {
-          if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
-            var target = $(this.hash);
-            target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
-            if (target.length) {
-              $('html,body').animate({
-                scrollTop: target.offset().top
-              }, 1000);
-              return false;
-            }
-          }
-        });
+      $(document).ready(function () {
+        /* ***************************
+          Enable Smooth Scrolling
+          Author: Chris Coyier
+          URL:  CSS-Tricks.com
+        ***************************** */
+        
+        // Select all links with hashes
+        $('a[href*="#"]')
+          // Remove links that don't actually link to anything
+          .not('[href="#"]')
+          .not('[href="#0"]')
+          .on('click', function (e) { 
+              // On-page links
+              if (
+                location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') 
+                && 
+                location.hostname == this.hostname
+              ) {
+                // Figure out element to scroll to
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                // Does a scroll target exist?
+                if (target.length) {
+                // Only prevent default if animation is actually gonna happen
+                  event.preventDefault();
+                  $('html, body').animate({
+                    scrollTop: target.offset().top
+                  }, 1000, function() {
+                    // Callback after animation
+                    // Must change focus!
+                    var $target = $(target);
+                    $target.focus();
+                    if ($target.is(":focus")) { // Checking if the target was focused
+                      return false;
+                    } else {
+                      $target.attr('tabindex','-1'); // Adding tabindex for elements not focusable
+                      $target.focus(); // Set focus again
+                    };
+                  });
+                  $('a').each(function () {
+                    $(this).removeClass('active');
+                  })
+                  $(this).addClass('active');               
+                }
+              }
+          });
+      });
     </script>
 </body>
 </html>
