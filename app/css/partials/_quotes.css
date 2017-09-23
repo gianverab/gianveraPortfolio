@@ -15,13 +15,13 @@
   }
   &-quote {
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
     flex-flow: column wrap;
     position: relative;
     border-radius: 2px;
     border-left: 0.5em solid var(--color-grey);
-    padding: 1.5em .75em;
+    padding: 1em .75em;
     background: #fff;
     box-shadow: 0 0 6px rgba(0,0,0,0.5);
   }
