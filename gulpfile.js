@@ -47,6 +47,12 @@ gulp.task('styles', function () {
     .pipe(browsersync.stream())
 })
 
+// Favicons
+gulp.task('assets', function () {
+  return gulp.src('./app/assets/*')
+    .pipe(gulp.dest(build))
+})
+
 // JS Workflow
 gulp.task('scripts', function (cb) {
   pump([
@@ -79,7 +85,7 @@ gulp.task('images', function () {
 })
 
 // Server set up and reload
-gulp.task('serve', ['html', 'styles', 'scripts', 'images'], function () {
+gulp.task('serve', ['html', 'styles', 'assets', 'scripts', 'images'], function () {
   browsersync.init({
     server: {
       baseDir: build
