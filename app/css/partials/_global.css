@@ -30,7 +30,7 @@
 	border-radius: 3px;
 	box-shadow: 0 0 2px 2px rgba(0, 0, 0, 0.6);
 	clip: auto !important;
-	color: #21759b;
+	color: var(--color-base);
 	display: block;
 	font-size: 14px;
 	font-weight: bold;
@@ -77,4 +77,23 @@ button, input, select, textarea {
 .site {
   max-width: 960px;
   margin: 0 auto;
+}
+/* Github Corner */
+.github-corner:hover .octo-arm,
+.github-corner:hover .octo-body {
+	color: var(--color-light);
+}
+.github-corner:hover .octo-arm {
+	animation:octocat-wave 560ms ease-in-out;
+}
+@keyframes octocat-wave {
+	0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)};
+}
+@media (max-width:500px) {
+	.github-corner:hover .octo-arm {
+		animation:none;
+	}
+	.github-corner .octo-arm {
+		animation:octocat-wave 560ms ease-in-out;
+	}
 }
