@@ -1,7 +1,7 @@
 .header {
   background: url(../img/hero_bg.jpg) no-repeat;
   background-size: cover;
-  background-position: center;
+  background-position: top;
   padding: 1em;
   display: flex;
   justify-content: center;
