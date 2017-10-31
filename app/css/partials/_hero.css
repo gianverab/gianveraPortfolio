@@ -1,6 +1,5 @@
 .largeHero {
     background: url(../img/hero_bg.jpg) no-repeat;
-    background-size: cover;
     background-position: center -180px;
     padding: 1.5em;
     display: grid;
