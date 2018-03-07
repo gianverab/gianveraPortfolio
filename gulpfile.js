@@ -23,7 +23,7 @@ var jsSrc = './app/js/*.js'
 var jsDest = './build/js/'
 var imgSrc = './app/img/*'
 var imgDest = './build/img/'
-var htmlSrc = './app/*.html'
+var indexSrc = './app/*'
 var build = './build/'
 
 // CSS Workflow
@@ -47,10 +47,10 @@ gulp.task('styles', function () {
     .pipe(browsersync.stream())
 })
 
-// Favicons
-gulp.task('assets', function () {
+// Homescreen icons
+gulp.task('icons', function () {
   return gulp.src('./app/assets/*')
-    .pipe(gulp.dest(build))
+    .pipe(gulp.dest(imgDest + 'touch/'))
 })
 
 // JS Workflow
@@ -69,9 +69,9 @@ gulp.task('scripts', function (cb) {
   )
 })
 
-// HTML Workflow
-gulp.task('html', function () {
-  return gulp.src(htmlSrc)
+// Index workflow
+gulp.task('index', function () {
+  return gulp.src(indexSrc)
     .pipe(gulp.dest(build))
 })
 
@@ -85,7 +85,7 @@ gulp.task('images', function () {
 })
 
 // Server set up and reload
-gulp.task('serve', ['html', 'styles', 'assets', 'scripts', 'images'], function () {
+gulp.task('serve', ['index', 'styles', 'images', 'icons', 'scripts'], function () {
   browsersync.init({
     server: {
       baseDir: build
@@ -97,7 +97,7 @@ gulp.task('serve', ['html', 'styles', 'assets', 'scripts', 'images'], function (
 gulp.task('watch', function () {
   gulp.watch('./app/css/**/*.css', ['styles'])
   gulp.watch('./app/js/**/*.js', ['scripts'])
-  gulp.watch(htmlSrc, ['html'])
+  gulp.watch(indexSrc, ['index'])
   gulp.watch(imgSrc, ['images'])
   gulp.watch(build + '*.html').on('change', browsersync.reload)
 })
