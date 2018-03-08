@@ -21,7 +21,7 @@ var cssSrc = './app/css/*.css'
 var cssDest = './build/css/'
 var jsSrc = './app/js/*.js'
 var jsDest = './build/js/'
-var imgSrc = './app/img/*'
+var imgSrc = './app/img/**/*'
 var imgDest = './build/img/'
 var indexSrc = './app/*'
 var build = './build/'
@@ -45,12 +45,6 @@ gulp.task('styles', function () {
     .pipe(sourcemaps.write('./'))
     .pipe(gulp.dest(cssDest))
     .pipe(browsersync.stream())
-})
-
-// Homescreen icons
-gulp.task('icons', function () {
-  return gulp.src('./app/assets/*')
-    .pipe(gulp.dest(imgDest + 'touch/'))
 })
 
 // JS Workflow
@@ -85,7 +79,7 @@ gulp.task('images', function () {
 })
 
 // Server set up and reload
-gulp.task('serve', ['index', 'styles', 'images', 'icons', 'scripts'], function () {
+gulp.task('serve', ['index', 'styles', 'images', 'scripts'], function () {
   browsersync.init({
     server: {
       baseDir: build
